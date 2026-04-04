@@ -55,7 +55,7 @@ const Offre = () => {
                 <ul className="space-y-3 text-left mb-8">
                   {includes.map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm">
-                      <Check className="w-4 h-4 text-cta flex-shrink-0 mt-0.5" />
+                      <Check className="w-4 h-4 text-highlight flex-shrink-0 mt-0.5" />
                       <span className="text-foreground">{item}</span>
                     </li>
                   ))}

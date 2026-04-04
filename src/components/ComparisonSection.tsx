@@ -10,10 +10,10 @@ const without = [
 
 const withOraya = [
   "Le chiffre exact de ce que vous avez gagné mais pas encore encaissé. Facture par facture.",
-  "Le nom précis des clients qui vous coûtent le plus — et pourquoi.",
+  "Le nom précis des clients qui vous coûtent le plus et pourquoi.",
   "Les 3 actions dans le bon ordre. Avec les scripts prêts à utiliser.",
   "Le cadre à poser pour que les retards ne se reproduisent plus.",
-  "Une décision concrète garantie — ou on recommence gratuitement.",
+  "Une décision concrète garantie ou on recommence gratuitement.",
 ];
 
 const ComparisonSection = () => (
@@ -44,12 +44,12 @@ const ComparisonSection = () => (
           </div>
 
           {/* Avec Oraya */}
-          <div className="p-6 md:p-8 border-l border-border" style={{ backgroundColor: "#F0FFF4", borderColor: "hsl(145 60% 42% / 0.15)" }}>
+          <div className="p-6 md:p-8 border-l border-border" style={{ backgroundColor: "#F0F7FF" }}>
             <h3 className="text-lg font-bold mb-6 text-primary">Avec Oraya</h3>
             <ul className="space-y-4">
               {withOraya.map((item, i) => (
                 <li key={i} className="flex gap-3 text-sm leading-relaxed text-foreground/80">
-                  <span className="text-cta flex-shrink-0 mt-0.5">✓</span>
+                  <span className="text-highlight flex-shrink-0 mt-0.5">✓</span>
                   {item}
                 </li>
               ))}
