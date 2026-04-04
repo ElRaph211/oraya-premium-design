@@ -48,8 +48,8 @@ const Contact = () => {
             <div className="md:col-span-3">
               <ScrollReveal delay={100}>
                 {submitted ? (
-                  <div className="rounded-xl border border-cta/30 p-8 text-center" style={{ backgroundColor: "#F0FFF4" }}>
-                    <p className="font-semibold text-cta">Votre client email va s'ouvrir avec le message pré-rempli.</p>
+                  <div className="rounded-xl border border-highlight/30 p-8 text-center" style={{ backgroundColor: "#F0F7FF" }}>
+                    <p className="font-semibold text-highlight">Votre client email va s'ouvrir avec le message pré-rempli.</p>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-4">

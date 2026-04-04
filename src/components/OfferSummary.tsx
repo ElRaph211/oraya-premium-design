@@ -10,12 +10,12 @@ const OfferSummary = () => (
           <p className="text-xs font-semibold tracking-widest uppercase text-highlight mb-4">Diagnostic complet</p>
           <h3 className="text-2xl font-bold mb-1">Oraya Precision</h3>
           <p className="text-muted-foreground line-through text-lg mb-1">4 500€</p>
-          <p className="text-3xl font-bold text-cta mb-6">2 500€ <span className="text-base font-normal text-muted-foreground">TTC</span></p>
+          <p className="text-3xl font-bold text-highlight mb-6">2 500€ <span className="text-base font-normal text-muted-foreground">TTC</span></p>
 
           <ul className="space-y-3 text-left mb-8">
             {["Analyse facture par facture", "Plan d'action priorisé", "Garanti 2x ou gratuit"].map((item) => (
               <li key={item} className="flex items-start gap-3 text-sm">
-                <Check className="w-4 h-4 text-cta flex-shrink-0 mt-0.5" />
+                <Check className="w-4 h-4 text-highlight flex-shrink-0 mt-0.5" />
                 <span className="text-foreground">{item}</span>
               </li>
             ))}

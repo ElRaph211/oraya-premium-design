@@ -49,13 +49,13 @@ const Offre = () => {
             <ScrollReveal>
               <div className="rounded-2xl border border-primary/20 p-8 text-center" style={{ backgroundColor: "#F8FAFC" }}>
                 <p className="text-muted-foreground line-through text-lg mb-1">4 500€</p>
-                <p className="text-4xl font-bold text-cta mb-2">2 500€ <span className="text-base font-normal text-muted-foreground">TTC</span></p>
+                <p className="text-4xl font-bold text-highlight mb-2">2 500€ <span className="text-base font-normal text-muted-foreground">TTC</span></p>
                 <p className="text-xs text-highlight font-semibold mb-6">Tarif fondateur — places limitées</p>
 
                 <ul className="space-y-3 text-left mb-8">
                   {includes.map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm">
-                      <Check className="w-4 h-4 text-cta flex-shrink-0 mt-0.5" />
+                      <Check className="w-4 h-4 text-highlight flex-shrink-0 mt-0.5" />
                       <span className="text-foreground">{item}</span>
                     </li>
                   ))}
@@ -78,12 +78,15 @@ const Offre = () => {
         <section className="section-padding bg-secondary/50">
           <div className="section-container max-w-2xl">
             <ScrollReveal>
-              <div className="rounded-xl border-l-4 border-l-highlight p-6 md:p-8" style={{ backgroundColor: "#F0F7FF" }}>
-                <h3 className="text-xl font-bold mb-3">La Garantie Oraya.</h3>
-                <p className="text-sm text-foreground/80 leading-relaxed">
-                  Nous identifions au minimum 2 fois le coût du diagnostic en cash récupérable dans vos données.
-                  Si nous n'y parvenons pas, nous reprenons l'analyse gratuitement. Sans condition.
-                </p>
+              <div className="rounded-2xl border border-border bg-background p-8 md:p-10 shadow-sm relative overflow-hidden">
+                <div className="absolute left-0 top-6 bottom-6 w-1 bg-highlight rounded-r-full" />
+                <div className="pl-6">
+                  <h3 className="text-xl font-bold mb-3">La Garantie Oraya.</h3>
+                  <p className="text-sm text-foreground/80 leading-relaxed">
+                    Nous identifions au minimum 2 fois le coût du diagnostic en cash récupérable dans vos données.
+                    Si nous n'y parvenons pas, nous reprenons l'analyse gratuitement. Sans condition.
+                  </p>
+                </div>
               </div>
             </ScrollReveal>
           </div>

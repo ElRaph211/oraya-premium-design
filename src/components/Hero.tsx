@@ -1,4 +1,11 @@
+import { Clock, ShieldCheck, Monitor } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+
+const badges = [
+  { icon: Clock, label: "Livré en 10 jours" },
+  { icon: ShieldCheck, label: "Prix fixe garanti" },
+  { icon: Monitor, label: "Aucun outil à installer" },
+];
 
 const Hero = () => (
   <section className="section-container py-12 md:py-20">
@@ -49,12 +56,13 @@ const Hero = () => (
 
         <ScrollReveal delay={250}>
           <div className="flex flex-wrap gap-3 pt-2">
-            {["Livré en 10 jours", "Prix fixe garanti", "Aucun outil à installer"].map((badge) => (
+            {badges.map(({ icon: Icon, label }) => (
               <span
-                key={badge}
-                className="text-xs font-medium bg-secondary text-secondary-foreground px-3 py-1.5 rounded-full border border-border"
+                key={label}
+                className="flex items-center gap-2 text-sm font-medium bg-secondary text-foreground/70 px-5 py-2.5 rounded-full border border-border"
               >
-                {badge}
+                <Icon className="w-4 h-4 text-highlight" />
+                {label}
               </span>
             ))}
           </div>
