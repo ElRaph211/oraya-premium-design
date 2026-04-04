@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
-import { Check, ShieldCheck, Plus, Minus } from "lucide-react";
+import { Check, ShieldCheck, Plus, Minus, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 
 const includes = [
@@ -13,34 +13,34 @@ const includes = [
   "Deux appels avec notre équipe : cadrage + restitution",
 ];
 
-const accordionSections = [
+const detailSections = [
   {
     title: "Analyse complète",
-    content: "12 mois de factures passés au crible. Chaque ligne est analysée individuellement : montant, date d'émission, date d'échéance, date de paiement réelle, écart, et impact sur votre trésorerie. Rien n'est estimé, tout est chiffré.",
+    content: "12 mois de données passées au crible, facture par facture, client par client. Aucune moyenne globale : chaque point de friction est identifié et chiffré.",
   },
   {
     title: "Clients passés au crible",
-    content: "Chaque client reçoit un score de risque basé sur son historique de paiement. Vous savez immédiatement qui vous coûte le plus, qui paie systématiquement en retard, et qui respecte ses engagements.",
+    content: "Score de risque individuel, historique de paiement, comportement récurrent. Vous savez exactement qui vous coûte combien.",
   },
   {
     title: "Causes identifiées",
-    content: "Nous identifions les causes structurelles de vos retards : conditions contractuelles inadaptées, absence de relance, process de facturation défaillant, dépendance à un client dominant, etc.",
+    content: "Délais contractuels mal calibrés, CGV non appliquées, absence de relance, litiges non tracés. Chaque cause est documentée.",
   },
   {
     title: "Plan d'action",
-    content: "Un plan priorisé par impact financier. Pour chaque action : le client concerné, le montant en jeu, le script de relance adapté (email, appel, courrier), et le calendrier recommandé.",
+    content: "Actions classées par impact financier. Messages de relance rédigés et adaptés au profil de chaque client.",
   },
   {
     title: "Projection et pilotage",
-    content: "Projection de vos encaissements à J+30, J+60 et J+90 si les actions sont appliquées. Vous voyez exactement combien de trésorerie vous pouvez récupérer et à quelle échéance.",
+    content: "Vos encaissements prévisionnels à J+30, J+60, J+90. Un tableau de bord synthétique pour piloter la suite.",
   },
   {
     title: "Accompagnement",
-    content: "Un appel de cadrage (20 min) pour comprendre votre situation. Un appel de restitution (30 min) pour parcourir le diagnostic ensemble. Un suivi à J+30 pour mesurer les résultats.",
+    content: "Un appel de cadrage (20 min) + un appel de restitution (30 min) + un point de suivi à J+30.",
   },
   {
-    title: "Bonus : modèle CGV",
-    content: "Un modèle de conditions générales de vente optimisé pour protéger vos délais de paiement. Inclut les clauses pénalités de retard, indemnité forfaitaire, et escompte.",
+    title: "Bonus",
+    content: "Modèle de CGV optimisé pour réduire structurellement vos délais de paiement.",
   },
 ];
 
@@ -54,7 +54,7 @@ const faqOffre = [
 
 const Offre = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-  const [openDetail, setOpenDetail] = useState<number | null>(null);
+  const [showDetail, setShowDetail] = useState(false);
 
   return (
     <>
@@ -86,20 +86,40 @@ const Offre = () => {
                   Tarif réservé à nos premiers clients. En échange : votre retour honnête et 20 minutes de feedback.
                 </p>
 
-                <ul className="space-y-3 text-left mb-8">
+                <ul className="space-y-3 text-left mb-6">
                   {includes.map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm">
-                      <Check className="w-4 h-4 text-highlight flex-shrink-0 mt-0.5" />
+                      <Check className="w-5 h-5 text-highlight flex-shrink-0 mt-0.5" />
                       <span className="text-foreground">{item}</span>
                     </li>
                   ))}
                 </ul>
 
+                {/* Collapsible detail */}
+                <button
+                  onClick={() => setShowDetail(!showDetail)}
+                  className="flex items-center justify-center gap-1 mx-auto text-sm font-medium text-highlight hover:underline mb-6 transition-colors"
+                >
+                  Voir le détail complet
+                  {showDetail ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+                </button>
+
+                {showDetail && (
+                  <div className="text-left space-y-5 mb-6 border-t border-border pt-6">
+                    {detailSections.map((section, i) => (
+                      <div key={i}>
+                        <p className="font-semibold text-sm text-foreground mb-1">{section.title}</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{section.content}</p>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
                 <a
                   href="https://tally.so/r/gD4dOM"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block bg-cta text-cta-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:bg-cta-hover transition-colors"
+                  className="block bg-cta text-cta-foreground px-6 py-3.5 rounded-lg font-semibold text-sm hover:bg-cta-hover transition-colors"
                 >
                   Vérifier mon éligibilité — 2 minutes
                 </a>
@@ -108,34 +128,7 @@ const Offre = () => {
           </div>
         </section>
 
-        {/* Accordion detail */}
-        <section className="section-padding bg-secondary/50">
-          <div className="section-container max-w-2xl">
-            <ScrollReveal>
-              <h2 className="text-2xl font-bold text-center mb-8">Voir le détail complet</h2>
-            </ScrollReveal>
-            <div className="space-y-3">
-              {accordionSections.map((section, i) => (
-                <ScrollReveal key={i} delay={i * 60}>
-                  <div className="border border-border rounded-xl bg-background overflow-hidden">
-                    <button
-                      onClick={() => setOpenDetail(openDetail === i ? null : i)}
-                      className="w-full flex items-center justify-between p-4 text-left hover:bg-secondary/50 transition-colors"
-                    >
-                      <span className="text-sm font-semibold pr-4">{section.title}</span>
-                      {openDetail === i ? <Minus className="w-4 h-4 text-highlight flex-shrink-0" /> : <Plus className="w-4 h-4 text-highlight flex-shrink-0" />}
-                    </button>
-                    {openDetail === i && (
-                      <div className="px-4 pb-4 text-sm text-muted-foreground leading-relaxed">{section.content}</div>
-                    )}
-                  </div>
-                </ScrollReveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Guarantee - matching homepage style */}
+        {/* Guarantee */}
         <section className="section-padding">
           <div className="section-container max-w-2xl">
             <ScrollReveal>
@@ -157,19 +150,6 @@ const Offre = () => {
                   </p>
                 </div>
               </div>
-            </ScrollReveal>
-          </div>
-        </section>
-
-        {/* ROI & ancrage comparatif */}
-        <section className="section-padding bg-secondary/50">
-          <div className="section-container max-w-2xl text-center">
-            <ScrollReveal>
-              <h2 className="text-2xl font-bold mb-4">Mettez ce prix en perspective.</h2>
-              <p className="text-sm text-muted-foreground mb-8 max-w-lg mx-auto">
-                2 500€ représente moins qu'un mois de retard sur un seul client moyen.
-                Le diagnostic identifie en moyenne 10 à 30x ce montant en cash récupérable.
-              </p>
             </ScrollReveal>
           </div>
         </section>
