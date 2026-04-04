@@ -49,7 +49,7 @@ const Offre = () => {
             <ScrollReveal>
               <div className="rounded-2xl border border-primary/20 p-8 text-center" style={{ backgroundColor: "#F8FAFC" }}>
                 <p className="text-muted-foreground line-through text-lg mb-1">4 500€</p>
-                <p className="text-4xl font-bold text-cta mb-2">2 500€ <span className="text-base font-normal text-muted-foreground">TTC</span></p>
+                <p className="text-4xl font-bold text-highlight mb-2">2 500€ <span className="text-base font-normal text-muted-foreground">TTC</span></p>
                 <p className="text-xs text-highlight font-semibold mb-6">Tarif fondateur — places limitées</p>
 
                 <ul className="space-y-3 text-left mb-8">
