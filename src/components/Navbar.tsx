@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoOraya from "@/assets/logo-oraya.png";
 
@@ -7,8 +7,8 @@ const WHATSAPP_URL = "https://wa.me/33778958554";
 
 const navLinks = [
   { label: "Accueil", to: "/" },
-  { label: "Système", to: "/systeme" },
-  { label: "Offre", to: "/offre" },
+  { label: "Système", to: "/#systeme" },
+  { label: "Offre", to: "/#offre" },
   { label: "FAQ", to: "/#faq" },
   { label: "Contact", to: "/contact" },
 ];
@@ -16,51 +16,67 @@ const navLinks = [
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
-  const handleNavClick = (to: string) => {
+  const handleAnchorClick = (to: string) => {
     setOpen(false);
-    if (to === "/#faq") {
-      if (location.pathname === "/") {
-        document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
-      }
+    const anchor = to.replace("/", "").replace("#", "");
+    if (location.pathname === "/") {
+      document.getElementById(anchor)?.scrollIntoView({ behavior: "smooth" });
+    } else {
+      navigate("/");
+      setTimeout(() => {
+        document.getElementById(anchor)?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
     }
   };
+
+  const isAnchor = (to: string) => to.startsWith("/#");
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
       <div className="section-container flex items-center justify-between h-16">
         <Link to="/" className="flex-shrink-0">
-          <img src={logoOraya} alt="Oraya" className="h-14 w-auto" />
+          <img src={logoOraya} alt="Oraya" className="h-16 w-auto" />
         </Link>
 
         {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
-          {navLinks.map((link) =>
-            link.to === "/#faq" ? (
-              <Link
-                key={link.to}
-                to="/"
-                onClick={() => {
-                  setTimeout(() => {
-                    document.getElementById("faq")?.scrollIntoView({ behavior: "smooth" });
-                  }, 100);
-                }}
-                className={`text-sm font-medium transition-colors hover:text-highlight text-foreground`}
-              >
-                {link.label}
-              </Link>
-            ) : (
-              <Link
-                key={link.to}
-                to={link.to}
-                className={`text-sm font-medium transition-colors hover:text-highlight ${
-                  location.pathname === link.to ? "text-highlight" : "text-foreground"
-                }`}
-              >
-                {link.label}
-              </Link>
-            )
-          )}
+          <div className="flex items-center gap-8">
+            {navLinks.map((link) =>
+              isAnchor(link.to) ? (
+                <button
+                  key={link.to}
+                  onClick={() => handleAnchorClick(link.to)}
+                  className="text-sm font-medium transition-colors hover:text-highlight text-foreground"
+                >
+                  {link.label}
+                </button>
+              ) : link.to === "/" ? (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                  className={`text-sm font-medium transition-colors hover:text-highlight ${
+                    location.pathname === "/" ? "text-highlight" : "text-foreground"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <Link
+                  key={link.to}
+                  to={link.to}
+                  onClick={() => window.scrollTo({ top: 0 })}
+                  className={`text-sm font-medium transition-colors hover:text-highlight ${
+                    location.pathname === link.to ? "text-highlight" : "text-foreground"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
+          </div>
           <div className="flex items-center gap-3">
             <a
               href="https://tally.so/r/gD4dOM"
@@ -92,11 +108,19 @@ const Navbar = () => {
       {open && (
         <div className="md:hidden border-t border-border bg-background px-4 pb-4">
           {navLinks.map((link) =>
-            link.to === "/#faq" ? (
+            isAnchor(link.to) ? (
+              <button
+                key={link.to}
+                onClick={() => handleAnchorClick(link.to)}
+                className="block w-full text-left py-3 text-sm font-medium text-foreground hover:text-highlight"
+              >
+                {link.label}
+              </button>
+            ) : link.to === "/" ? (
               <Link
                 key={link.to}
-                to="/"
-                onClick={() => handleNavClick(link.to)}
+                to={link.to}
+                onClick={() => { setOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
                 className="block py-3 text-sm font-medium text-foreground hover:text-highlight"
               >
                 {link.label}
@@ -105,7 +129,7 @@ const Navbar = () => {
               <Link
                 key={link.to}
                 to={link.to}
-                onClick={() => setOpen(false)}
+                onClick={() => { setOpen(false); window.scrollTo({ top: 0 }); }}
                 className="block py-3 text-sm font-medium text-foreground hover:text-highlight"
               >
                 {link.label}

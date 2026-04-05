@@ -3,10 +3,10 @@ import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import ProblemsSection from "@/components/ProblemsSection";
 import ComparisonSection from "@/components/ComparisonSection";
+import SystemeSection from "@/components/SystemeSection";
 import Calculator from "@/components/Calculator";
-import OfferSummary from "@/components/OfferSummary";
+import OffreSection from "@/components/OffreSection";
 import ProcessSteps from "@/components/ProcessSteps";
-import GuaranteeSection from "@/components/GuaranteeSection";
 import AboutSection from "@/components/AboutSection";
 import FAQSection from "@/components/FAQSection";
 import FinalCTA from "@/components/FinalCTA";
@@ -18,10 +18,10 @@ const Index = () => (
       <Hero />
       <ProblemsSection />
       <ComparisonSection />
+      <SystemeSection />
       <Calculator />
-      <OfferSummary />
+      <OffreSection />
       <ProcessSteps />
-      <GuaranteeSection />
       <AboutSection />
       <FAQSection />
       <FinalCTA />
