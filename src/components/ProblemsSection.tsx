@@ -2,18 +2,21 @@ import ScrollReveal from "./ScrollReveal";
 
 const cards = [
   {
+    emoji: "💸",
     badge: "Trésorerie sous tension",
     badgeColor: "bg-red-100 text-red-700",
     title: "Vous financez vos clients sans le vouloir",
     text: "Vous travaillez, vous facturez, mais le cash ne suit pas. Vos clients vous paient en retard pendant qu'on vous réclame charges, salaires et fournisseurs sans délai.",
   },
   {
+    emoji: "🔍",
     badge: "Manque de visibilité",
     badgeColor: "bg-orange-100 text-orange-700",
     title: "Vous ne savez pas ce qui bloque vraiment",
     text: "Vous savez que certains clients paient en retard. Mais lesquels vous coûtent le plus ? Sans analyse précise, impossible de savoir où agir en priorité.",
   },
   {
+    emoji: "⏳",
     badge: "Inaction subie",
     badgeColor: "bg-primary/10 text-primary",
     title: "Vous ne savez pas par où commencer",
@@ -39,6 +42,9 @@ const ProblemsSection = () => (
         {cards.map((card, i) => (
           <ScrollReveal key={i} delay={i * 120}>
             <div className="bg-background rounded-xl border border-border p-6 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 h-full">
+              <div className="text-4xl mb-4 animate-bounce" style={{ animationDuration: "2s", animationDelay: `${i * 0.3}s` }}>
+                {card.emoji}
+              </div>
               <span className={`inline-block text-xs font-semibold px-3 py-1 rounded-full mb-4 ${card.badgeColor}`}>
                 {card.badge}
               </span>

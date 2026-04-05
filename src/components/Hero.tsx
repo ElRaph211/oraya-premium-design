@@ -1,4 +1,5 @@
 import { Clock, ShieldCheck, Monitor } from "lucide-react";
+import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 
 const badges = [
@@ -45,12 +46,12 @@ const Hero = () => (
             >
               Vérifier mon éligibilité — 2 minutes
             </a>
-            <a
-              href="/offre"
+            <Link
+              to="/contact"
               className="border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
             >
-              Voir notre offre
-            </a>
+              Nous contacter
+            </Link>
           </div>
         </ScrollReveal>
 

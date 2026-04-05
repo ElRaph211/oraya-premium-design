@@ -10,7 +10,7 @@ const Footer = () => (
     <div className="section-container py-12">
       <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
         <div className="space-y-3">
-          <img src={logoOraya} alt="Oraya" className="h-10 w-auto brightness-0 invert" />
+          <img src={logoOraya} alt="Oraya" className="h-14 w-auto brightness-0 invert" />
           <p className="text-sm opacity-70 max-w-xs">
             Diagnostic retards de paiement pour PME B2B
           </p>
@@ -38,8 +38,8 @@ const Footer = () => (
 
         <div className="flex flex-wrap gap-6 text-sm">
           <Link to="/" className="opacity-70 hover:opacity-100 transition-opacity">Accueil</Link>
-          <Link to="/systeme" className="opacity-70 hover:opacity-100 transition-opacity">Système</Link>
-          <Link to="/offre" className="opacity-70 hover:opacity-100 transition-opacity">Offre</Link>
+          <Link to="/#systeme" className="opacity-70 hover:opacity-100 transition-opacity">Système</Link>
+          <Link to="/#offre" className="opacity-70 hover:opacity-100 transition-opacity">Offre</Link>
           <Link to="/contact" className="opacity-70 hover:opacity-100 transition-opacity">Contact</Link>
           <Link to="/mentions-legales" className="opacity-70 hover:opacity-100 transition-opacity">Mentions légales</Link>
         </div>
