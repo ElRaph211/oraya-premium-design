@@ -10,6 +10,7 @@ import ProcessSteps from "@/components/ProcessSteps";
 import AboutSection from "@/components/AboutSection";
 import FAQSection from "@/components/FAQSection";
 import FinalCTA from "@/components/FinalCTA";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => (
   <>
@@ -20,13 +21,14 @@ const Index = () => (
       <ComparisonSection />
       <SystemeSection />
       <Calculator />
-      <OffreSection />
       <ProcessSteps />
+      <OffreSection />
       <AboutSection />
       <FAQSection />
       <FinalCTA />
     </main>
     <Footer />
+    <FloatingWhatsApp />
   </>
 );
 

@@ -11,7 +11,7 @@ const FinalCTA = () => (
           href="https://tally.so/r/gD4dOM"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block bg-cta text-cta-foreground px-8 py-3.5 rounded-lg font-semibold text-sm hover:bg-cta-hover transition-colors"
+          className="inline-block bg-cta text-cta-foreground px-8 py-4 rounded-lg font-semibold text-sm hover:bg-cta-hover transition-all duration-300 shadow-lg shadow-cta/25 hover:shadow-xl hover:shadow-cta/35 hover:-translate-y-0.5 hover:scale-[1.02]"
         >
           Vérifier mon éligibilité — 2 minutes
         </a>

@@ -11,7 +11,6 @@ const badges = [
 const Hero = () => (
   <section className="section-container py-12 md:py-20">
     <div className="grid md:grid-cols-5 gap-10 items-center">
-      {/* Left column — 60% */}
       <div className="md:col-span-3 space-y-6">
         <ScrollReveal>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
@@ -42,13 +41,14 @@ const Hero = () => (
               href="https://tally.so/r/gD4dOM"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-cta text-cta-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:bg-cta-hover transition-colors shadow-sm"
+              className="group relative bg-cta text-cta-foreground px-7 py-3.5 rounded-lg font-semibold text-sm hover:bg-cta-hover transition-all duration-300 shadow-lg shadow-cta/25 hover:shadow-xl hover:shadow-cta/35 hover:-translate-y-0.5 hover:scale-[1.02]"
             >
-              Vérifier mon éligibilité — 2 minutes
+              <span className="relative z-10">Vérifier mon éligibilité — 2 minutes</span>
             </a>
             <Link
               to="/contact"
-              className="border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold text-sm hover:bg-primary hover:text-primary-foreground transition-colors"
+              onClick={() => window.scrollTo({ top: 0 })}
+              className="border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold text-sm hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:-translate-y-0.5"
             >
               Nous contacter
             </Link>
@@ -70,7 +70,6 @@ const Hero = () => (
         </ScrollReveal>
       </div>
 
-      {/* Right column — 40% */}
       <div className="md:col-span-2">
         <ScrollReveal delay={300}>
           <div className="bg-secondary rounded-2xl shadow-lg border border-border aspect-[4/3] flex items-center justify-center">
