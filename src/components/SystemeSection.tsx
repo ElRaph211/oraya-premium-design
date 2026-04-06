@@ -25,6 +25,18 @@ const SystemeSection = () => (
         </div>
       </ScrollReveal>
 
+      {/* Placeholder pour 2 images */}
+      <ScrollReveal>
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="aspect-video rounded-xl border-2 border-dashed border-border bg-muted/30 flex items-center justify-center">
+            <p className="text-sm text-muted-foreground">Image 1</p>
+          </div>
+          <div className="aspect-video rounded-xl border-2 border-dashed border-border bg-muted/30 flex items-center justify-center">
+            <p className="text-sm text-muted-foreground">Image 2</p>
+          </div>
+        </div>
+      </ScrollReveal>
+
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         {blocks.map((block, i) => {
           const Icon = block.icon;
