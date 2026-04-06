@@ -27,7 +27,7 @@ const faqs = [
   },
   {
     q: "Mes données sont-elles sécurisées ?",
-    a: "Absolument. Vos données sont traitées de manière confidentielle, stockées sur des serveurs sécurisés en Europe, et supprimées après la mission. Nous signons un accord de confidentialité dès le départ.",
+    a: "Absolument. Vos données sont traitées de manière confidentielle, stockées sur des serveurs sécurisés en Europe, et supprimées après la mission. Nous pouvons signer un accord de confidentialité sur demande.",
   },
   {
     q: "Je ne veux pas brusquer mes clients.",
