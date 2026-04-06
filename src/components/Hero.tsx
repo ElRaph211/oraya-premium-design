@@ -28,7 +28,7 @@ const Hero = () => (
 
         <ScrollReveal delay={150}>
           <p className="text-muted-foreground text-sm max-w-xl leading-relaxed">
-            Oraya analyse vos factures une par une et vous montre exactement où votre trésorerie se bloque. En 10 jours. Prix fixe.
+            Oraya identifie combien de cash est bloqué chez vos clients, pourquoi, et vous dit exactement quoi faire cette semaine pour le récupérer.
           </p>
           <p className="text-muted-foreground text-sm italic mt-2 max-w-xl">
             Vous envoyez vos exports. On fait tout le reste. Vous recevez les décisions.
