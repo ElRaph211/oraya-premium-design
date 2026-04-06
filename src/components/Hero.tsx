@@ -28,7 +28,7 @@ const Hero = () => (
 
         <ScrollReveal delay={150}>
           <p className="text-muted-foreground text-sm max-w-xl leading-relaxed">
-            Oraya analyse vos factures une par une et vous montre exactement où votre trésorerie se bloque. En 10 jours. Prix fixe.
+            Oraya identifie combien de cash est bloqué chez vos clients, pourquoi, et vous dit exactement quoi faire cette semaine pour le récupérer.
           </p>
           <p className="text-muted-foreground text-sm italic mt-2 max-w-xl">
             Vous envoyez vos exports. On fait tout le reste. Vous recevez les décisions.
@@ -41,7 +41,7 @@ const Hero = () => (
               href="https://tally.so/r/gD4dOM"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative bg-cta text-cta-foreground px-7 py-3.5 rounded-lg font-semibold text-sm hover:bg-cta-hover transition-all duration-300 shadow-lg shadow-cta/25 hover:shadow-xl hover:shadow-cta/35 hover:-translate-y-0.5 hover:scale-[1.02]"
+              className="group relative bg-cta text-cta-foreground px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97] animate-cta-glow"
             >
               <span className="relative z-10">Vérifier mon éligibilité — 2 minutes</span>
             </a>

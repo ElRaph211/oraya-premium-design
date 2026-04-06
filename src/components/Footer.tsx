@@ -52,7 +52,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
           <div className="space-y-3">
             <button onClick={() => handleNavClick("/")} className="block">
-              <img src={logoOraya} alt="Oraya" className="h-28 w-auto brightness-0 invert" />
+              <img src={logoOraya} alt="Oraya" className="h-36 w-auto brightness-0 invert" />
             </button>
             <p className="text-sm opacity-70 max-w-xs">
               Diagnostic retards de paiement pour PME B2B
