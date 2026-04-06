@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
@@ -14,6 +15,10 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const Index = () => (
   <>
+    <Helmet>
+      <title>Oraya — Encaissez plus vite</title>
+      <meta name="description" content="Diagnostic retards de paiement pour PME B2B. Identifiez votre cash bloqué et récupérez-le en 10 jours." />
+    </Helmet>
     <Navbar />
     <main>
       <Hero />
