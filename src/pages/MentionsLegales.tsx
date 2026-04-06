@@ -1,8 +1,13 @@
+import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const MentionsLegales = () => (
   <>
+    <Helmet>
+      <title>Mentions légales — Oraya</title>
+      <meta name="description" content="Mentions légales du site Oraya — Diagnostic retards de paiement pour PME B2B." />
+    </Helmet>
     <Navbar />
     <main className="section-padding">
       <div className="section-container max-w-2xl">
@@ -20,7 +25,7 @@ const MentionsLegales = () => (
 
           <div>
             <h2 className="text-lg font-bold text-primary mb-2">Hébergement</h2>
-            <p>Ce site est hébergé par Lovable.</p>
+            <p>Ce site est hébergé par Lovable (lovable.dev).</p>
           </div>
 
           <div>
@@ -36,7 +41,9 @@ const MentionsLegales = () => (
             <h2 className="text-lg font-bold text-primary mb-2">Données personnelles</h2>
             <p>
               Les données collectées via le formulaire de contact sont utilisées uniquement pour répondre
-              à votre demande. Elles ne sont ni vendues ni transmises à des tiers.
+              à votre demande. Elles ne sont ni vendues ni transmises à des tiers. Conformément au RGPD,
+              vous disposez d'un droit d'accès, de rectification et de suppression de vos données.
+              Pour exercer ce droit, contactez-nous à raphael@orayasystem.fr.
             </p>
           </div>
         </div>
