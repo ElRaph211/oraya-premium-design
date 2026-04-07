@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+import { TALLY_URL } from "@/config/constants";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -14,6 +16,10 @@ const blocks = [
 
 const Systeme = () => (
   <>
+    <Helmet>
+      <title>Notre méthode — Oraya | Analyse facture par facture</title>
+      <meta name="description" content="Découvrez la méthode Oraya : cartographie de vos créances, scoring client et priorisation par impact. Une approche chirurgicale pour récupérer votre trésorerie." />
+    </Helmet>
     <Navbar />
     <main>
       <section className="section-padding">
@@ -57,7 +63,7 @@ const Systeme = () => (
           <ScrollReveal>
             <h2 className="text-2xl font-bold mb-4">Prêt à reprendre le contrôle de votre trésorerie ?</h2>
             <a
-              href="https://tally.so/r/gD4dOM"
+              href={TALLY_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-cta text-cta-foreground px-8 py-3.5 rounded-lg font-semibold text-sm hover:bg-cta-hover transition-colors"

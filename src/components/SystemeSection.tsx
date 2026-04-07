@@ -1,5 +1,6 @@
 import { Shield, Search, Target, Lightbulb, BarChart3, FileCheck } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import { TALLY_URL } from "@/config/constants";
 
 const blocks = [
   { icon: Search, title: "Cartographie complète", text: "Chaque facture est analysée individuellement : montant, client, délai réel, écart par rapport aux conditions. Rien n'est estimé." },
@@ -62,7 +63,7 @@ const SystemeSection = () => (
       <ScrollReveal delay={150}>
         <div className="text-center mt-10">
           <a
-            href="https://tally.so/r/gD4dOM"
+            href={TALLY_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-cta text-cta-foreground px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97] animate-cta-glow"

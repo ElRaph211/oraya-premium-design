@@ -1,4 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
+import { TALLY_URL } from "@/config/constants";
 
 const FinalCTA = () => (
   <section className="section-padding bg-secondary/50">
@@ -8,7 +9,7 @@ const FinalCTA = () => (
           Sans mesure, pas de recul.<br />Sans recul, <span className="text-highlight italic">pas de correction.</span>
         </p>
         <a
-          href="https://tally.so/r/gD4dOM"
+          href={TALLY_URL}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block bg-cta text-cta-foreground px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97] animate-cta-glow"

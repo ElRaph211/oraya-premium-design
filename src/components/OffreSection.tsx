@@ -1,6 +1,7 @@
 import { Check, ShieldCheck, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import ScrollReveal from "./ScrollReveal";
+import { TALLY_URL } from "@/config/constants";
 
 const includes = [
   "12 mois de facturation analysés, facture par facture",
@@ -79,7 +80,7 @@ const OffreSection = () => {
               )}
 
               <a
-                href="https://tally.so/r/gD4dOM"
+                href={TALLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block bg-cta text-cta-foreground px-6 py-3.5 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97] animate-cta-glow"

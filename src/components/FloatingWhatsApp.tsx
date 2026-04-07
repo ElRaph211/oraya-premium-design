@@ -1,4 +1,4 @@
-const WHATSAPP_URL = "https://wa.me/33778958554";
+import { WHATSAPP_URL } from "@/config/constants";
 
 const FloatingWhatsApp = () => (
   <a

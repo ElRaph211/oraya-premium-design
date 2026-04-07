@@ -1,3 +1,5 @@
+import { Helmet } from "react-helmet-async";
+import { TALLY_URL } from "@/config/constants";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -58,6 +60,10 @@ const Offre = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Oraya Precision — L'offre | Diagnostic retards de paiement</title>
+        <meta name="description" content="Découvrez l'offre Oraya Precision : analyse facture par facture, scoring client, scripts de relance et plan d'action. Récupérez votre cash bloqué en 10 jours." />
+      </Helmet>
       <Navbar />
       <main>
         {/* Header */}
@@ -116,7 +122,7 @@ const Offre = () => {
                 )}
 
                 <a
-                  href="https://tally.so/r/gD4dOM"
+                  href={TALLY_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block bg-cta text-cta-foreground px-6 py-3.5 rounded-lg font-semibold text-sm hover:bg-cta-hover transition-colors"
@@ -189,7 +195,7 @@ const Offre = () => {
                 Sans mesure, pas de recul.<br />Sans recul, pas de correction.
               </p>
               <a
-                href="https://tally.so/r/gD4dOM"
+                href={TALLY_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-block bg-cta text-cta-foreground px-8 py-3.5 rounded-lg font-semibold text-sm hover:bg-cta-hover transition-colors"

@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logoOraya from "@/assets/logo-oraya.png";
-
-const WHATSAPP_URL = "https://wa.me/33778958554";
+import { WHATSAPP_URL, TALLY_URL } from "@/config/constants";
 
 const navLinks = [
   { label: "Accueil", to: "/" },
@@ -86,7 +85,7 @@ const Navbar = () => {
 
         <div className="hidden md:flex items-center gap-3">
           <a
-            href="https://tally.so/r/gD4dOM"
+            href={TALLY_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-cta text-cta-foreground px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-xl hover:shadow-cta/50 hover:-translate-y-0.5 hover:scale-[1.03] active:scale-[0.97]"
@@ -142,7 +141,7 @@ const Navbar = () => {
           )}
           <div className="flex items-center gap-3 mt-2">
             <a
-              href="https://tally.so/r/gD4dOM"
+              href={TALLY_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 bg-cta text-cta-foreground px-5 py-2.5 rounded-lg text-sm font-semibold text-center transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-xl hover:shadow-cta/50 active:scale-[0.97]"

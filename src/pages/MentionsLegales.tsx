@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { EMAIL } from "@/config/constants";
 
 const MentionsLegales = () => (
   <>
@@ -21,7 +22,7 @@ const MentionsLegales = () => (
               Forme juridique : Entrepreneur Individuel (EI)<br />
               Nom et prénom : Raphaël Aubry<br />
               Adresse : 128 Rue La Boétie, 75008 Paris<br />
-              Email : <a href="mailto:raphael@orayasystem.fr" className="text-highlight hover:underline">raphael@orayasystem.fr</a><br />
+              Email : <a href={`mailto:${EMAIL}`} className="text-highlight hover:underline">{EMAIL}</a><br />
               Téléphone : +33 7 78 95 85 54<br />
               SIRET : 1024 569 510 0015<br />
               TVA : Non applicable — article 293B du CGI<br />
@@ -50,7 +51,7 @@ const MentionsLegales = () => (
             <h2 className="text-lg font-bold text-primary mb-3">4. Données personnelles &amp; RGPD</h2>
             <p className="mb-3">
               <span className="font-semibold">Responsable du traitement :</span> Raphaël Aubry — Oraya —{" "}
-              <a href="mailto:raphael@orayasystem.fr" className="text-highlight hover:underline">raphael@orayasystem.fr</a>
+              <a href={`mailto:${EMAIL}`} className="text-highlight hover:underline">{EMAIL}</a>
             </p>
 
             <p className="font-semibold mb-1">Données collectées :</p>
@@ -86,7 +87,7 @@ const MentionsLegales = () => (
 
             <p className="mb-3">
               <span className="font-semibold">Vos droits (RGPD) :</span> Conformément au Règlement Européen 2016/679, vous disposez des droits d'accès, rectification, effacement, limitation, opposition et portabilité sur vos données. Pour exercer vos droits :{" "}
-              <a href="mailto:raphael@orayasystem.fr" className="text-highlight hover:underline">raphael@orayasystem.fr</a> — réponse sous 30 jours ouvrés.
+              <a href={`mailto:${EMAIL}`} className="text-highlight hover:underline">{EMAIL}</a> — réponse sous 30 jours ouvrés.
             </p>
 
             <p>

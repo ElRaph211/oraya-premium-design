@@ -1,6 +1,7 @@
 import { Check } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
+import { TALLY_URL } from "@/config/constants";
 
 const OfferSummary = () => (
   <section className="section-padding">
@@ -22,7 +23,7 @@ const OfferSummary = () => (
           </ul>
 
           <a
-            href="https://tally.so/r/gD4dOM"
+            href={TALLY_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="block bg-cta text-cta-foreground px-6 py-3 rounded-lg font-semibold text-sm hover:bg-cta-hover transition-colors mb-3"

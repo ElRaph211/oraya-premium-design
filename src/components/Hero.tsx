@@ -1,6 +1,7 @@
 import { Clock, ShieldCheck, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
+import { TALLY_URL } from "@/config/constants";
 
 const badges = [
   { icon: Clock, label: "Livré en 10 jours" },
@@ -42,7 +43,7 @@ const Hero = () => (
         <ScrollReveal delay={200}>
           <div className="flex flex-wrap gap-3 pt-2">
             <a
-              href="https://tally.so/r/gD4dOM"
+              href={TALLY_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="group relative bg-cta text-cta-foreground px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97] animate-cta-glow"

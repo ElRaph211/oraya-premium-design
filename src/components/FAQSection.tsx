@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
-
-const WHATSAPP_URL = "https://wa.me/33778958554";
+import { WHATSAPP_URL, EMAIL } from "@/config/constants";
 
 const faqs = [
   {
@@ -69,7 +68,7 @@ const FAQSection = () => {
                     Envoyer un message à Raphaël
                   </a>
                   <a
-                    href="mailto:raphael@orayasystem.fr"
+                    href={`mailto:${EMAIL}`}
                     className="block text-center text-sm text-white/80 hover:text-white underline mt-4 transition-colors"
                   >
                     ou envoyer un email
