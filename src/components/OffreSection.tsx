@@ -1,4 +1,4 @@
-import { Check, ShieldCheck, ChevronDown, ChevronUp, Plus, Minus } from "lucide-react";
+import { Check, ShieldCheck, ChevronDown, ChevronUp } from "lucide-react";
 import { useState } from "react";
 import ScrollReveal from "./ScrollReveal";
 
@@ -30,9 +30,11 @@ const OffreSection = () => {
         <ScrollReveal>
           <div className="text-center max-w-3xl mx-auto mb-12">
             <p className="text-xs font-semibold uppercase tracking-widest text-highlight mb-3">L'offre</p>
-            <h2 className="text-2xl md:text-3xl font-bold mb-4">Oraya Precision</h2>
+            <h2 className="text-2xl md:text-3xl font-bold mb-4">
+              Oraya <span className="text-highlight italic">Precision</span>
+            </h2>
             <p className="text-muted-foreground">
-              Un diagnostic complet de vos retards de paiement, livré en 10 jours, avec un résultat garanti.
+              Un diagnostic complet de vos retards de paiement, livré en <span className="font-semibold text-foreground">10 jours</span>, avec un <span className="font-semibold text-highlight">résultat garanti</span>.
             </p>
           </div>
         </ScrollReveal>
@@ -80,7 +82,7 @@ const OffreSection = () => {
                 href="https://tally.so/r/gD4dOM"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block bg-cta text-cta-foreground px-6 py-3.5 rounded-lg font-semibold text-sm hover:bg-cta-hover transition-colors"
+                className="block bg-cta text-cta-foreground px-6 py-3.5 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97] animate-cta-glow"
               >
                 Vérifier mon éligibilité — 2 minutes
               </a>
@@ -88,7 +90,6 @@ const OffreSection = () => {
           </ScrollReveal>
         </div>
 
-        {/* Guarantee */}
         <div className="max-w-2xl mx-auto mt-12">
           <ScrollReveal>
             <div className="rounded-2xl border border-border bg-background p-8 md:p-10 shadow-sm relative overflow-hidden">
@@ -97,11 +98,11 @@ const OffreSection = () => {
                 <div className="w-12 h-12 rounded-xl bg-highlight/10 flex items-center justify-center mb-5">
                   <ShieldCheck className="w-6 h-6 text-highlight" />
                 </div>
-                <h3 className="text-2xl font-bold mb-4">La Garantie Oraya.</h3>
+                <h3 className="text-2xl font-bold mb-4">La <span className="text-highlight italic">Garantie</span> Oraya.</h3>
                 <p className="text-base text-foreground/80 leading-relaxed mb-4">
-                  Nous identifions au minimum 2 fois le coût du diagnostic en cash
+                  Nous identifions au minimum <span className="font-semibold text-highlight">2 fois le coût du diagnostic</span> en cash
                   récupérable dans vos données. Si nous n'y parvenons pas, nous
-                  reprenons l'analyse gratuitement. Sans condition.
+                  reprenons l'analyse <span className="font-semibold text-foreground">gratuitement. Sans condition.</span>
                 </p>
                 <p className="text-sm text-muted-foreground leading-relaxed">
                   Nous sélectionnons les entreprises que nous pouvons réellement aider.

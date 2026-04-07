@@ -10,11 +10,11 @@ const without = [
 ];
 
 const withOraya = [
-  { title: "Cash bloqué identifié", desc: "Le chiffre exact de ce que vous avez gagné mais pas encore encaissé. Facture par facture." },
-  { title: "Clients à risque ciblés", desc: "Le nom précis des clients qui vous coûtent le plus et pourquoi." },
-  { title: "Actions priorisées", desc: "Les 3 actions dans le bon ordre. Avec les scripts prêts à utiliser." },
+  { title: "Cash bloqué identifié", desc: <>Le chiffre exact de ce que vous avez gagné mais <span className="font-semibold text-highlight">pas encore encaissé</span>. Facture par facture.</> },
+  { title: "Clients à risque ciblés", desc: <>Le nom précis des clients qui vous coûtent le plus et <span className="font-semibold text-highlight">pourquoi</span>.</> },
+  { title: "Actions priorisées", desc: <>Les <span className="font-semibold text-highlight">3 actions dans le bon ordre</span>. Avec les scripts prêts à utiliser.</> },
   { title: "Cadre anti-récidive", desc: "Le cadre à poser pour que les retards ne se reproduisent plus." },
-  { title: "Résultat garanti", desc: "Une décision concrète garantie ou on recommence gratuitement." },
+  { title: "Résultat garanti", desc: <>Une <span className="font-semibold text-highlight">décision concrète garantie</span> ou on recommence gratuitement.</> },
 ];
 
 const ComparisonSection = () => (
@@ -22,16 +22,17 @@ const ComparisonSection = () => (
     <div className="section-container">
       <ScrollReveal>
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">Ce que ça change concrètement.</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+            Ce que ça change <span className="text-highlight italic">concrètement.</span>
+          </h2>
           <p className="text-muted-foreground">
-            Pas un rapport de plus qui finit dans un tiroir. Des décisions à prendre dès le lendemain matin.
+            Pas un rapport de plus qui finit dans un tiroir. Des <span className="font-semibold text-foreground">décisions à prendre dès le lendemain matin</span>.
           </p>
         </div>
       </ScrollReveal>
 
       <ScrollReveal delay={100}>
         <div className="grid md:grid-cols-2 gap-6">
-          {/* Sans la méthode Oraya */}
           <div className="rounded-2xl p-6 md:p-8 border border-red-200" style={{ backgroundColor: "#FDF2F2" }}>
             <h3 className="text-xl font-bold mb-6 text-red-600">Sans la méthode Oraya</h3>
             <ul className="space-y-5">
@@ -47,7 +48,6 @@ const ComparisonSection = () => (
             </ul>
           </div>
 
-          {/* Avec la méthode Oraya */}
           <div className="rounded-2xl p-6 md:p-8 border border-highlight/20" style={{ backgroundColor: "#F0F7FF" }}>
             <h3 className="text-xl font-bold mb-6 text-highlight flex items-center gap-2">
               <CheckCircle2 className="w-6 h-6" />

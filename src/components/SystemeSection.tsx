@@ -17,42 +17,60 @@ const SystemeSection = () => (
         <div className="text-center max-w-3xl mx-auto mb-12">
           <p className="text-xs font-semibold uppercase tracking-widest text-highlight mb-3">Le système</p>
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Le Système Oraya
+            Un diagnostic structuré orienté{" "}
+            <span className="text-highlight italic">résultats</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Pas un logiciel. Pas un consultant généraliste. Un diagnostic structuré, livré en 10 jours, avec des décisions actionnables dès le lendemain.
+            Pas un logiciel. Pas un consultant généraliste. Un diagnostic structuré, livré en <span className="font-semibold text-foreground">10 jours</span>, avec des décisions actionnables dès le lendemain.
           </p>
         </div>
       </ScrollReveal>
 
-      {/* Placeholder pour 2 images */}
-      <ScrollReveal>
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
-          <div className="aspect-video rounded-xl border-2 border-dashed border-border bg-muted/30 flex items-center justify-center">
-            <p className="text-sm text-muted-foreground">Image 1</p>
+      <ScrollReveal delay={50}>
+        <div className="rounded-2xl border border-border overflow-hidden">
+          <div className="grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border">
+            {blocks.slice(0, 3).map((block, i) => {
+              const Icon = block.icon;
+              return (
+                <div key={i} className="p-6 md:p-8 hover:bg-secondary/30 transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-highlight/10 flex items-center justify-center mb-5">
+                    <Icon className="w-6 h-6 text-highlight" />
+                  </div>
+                  <h3 className="font-bold text-base mb-2">{block.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{block.text}</p>
+                </div>
+              );
+            })}
           </div>
-          <div className="aspect-video rounded-xl border-2 border-dashed border-border bg-muted/30 flex items-center justify-center">
-            <p className="text-sm text-muted-foreground">Image 2</p>
+          <div className="border-t border-border grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-border">
+            {blocks.slice(3).map((block, i) => {
+              const Icon = block.icon;
+              return (
+                <div key={i} className="p-6 md:p-8 hover:bg-secondary/30 transition-colors">
+                  <div className="w-12 h-12 rounded-xl bg-highlight/10 flex items-center justify-center mb-5">
+                    <Icon className="w-6 h-6 text-highlight" />
+                  </div>
+                  <h3 className="font-bold text-base mb-2">{block.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{block.text}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </ScrollReveal>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {blocks.map((block, i) => {
-          const Icon = block.icon;
-          return (
-            <ScrollReveal key={i} delay={i * 80}>
-              <div className="bg-background rounded-xl border border-border p-6 hover:shadow-md hover:-translate-y-1 transition-all duration-300 h-full">
-                <div className="w-10 h-10 rounded-lg bg-highlight/10 flex items-center justify-center mb-4">
-                  <Icon className="w-5 h-5 text-highlight" />
-                </div>
-                <h3 className="font-bold text-base mb-2">{block.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">{block.text}</p>
-              </div>
-            </ScrollReveal>
-          );
-        })}
-      </div>
+      <ScrollReveal delay={150}>
+        <div className="text-center mt-10">
+          <a
+            href="https://tally.so/r/gD4dOM"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-cta text-cta-foreground px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97] animate-cta-glow"
+          >
+            Vérifier mon éligibilité — 2 minutes
+          </a>
+        </div>
+      </ScrollReveal>
     </div>
   </section>
 );

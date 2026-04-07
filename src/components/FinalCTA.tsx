@@ -5,7 +5,7 @@ const FinalCTA = () => (
     <div className="section-container max-w-xl text-center">
       <ScrollReveal>
         <p className="text-xl md:text-2xl font-semibold text-primary leading-snug mb-6">
-          Sans mesure, pas de recul.<br />Sans recul, pas de correction.
+          Sans mesure, pas de recul.<br />Sans recul, <span className="text-highlight italic">pas de correction.</span>
         </p>
         <a
           href="https://tally.so/r/gD4dOM"

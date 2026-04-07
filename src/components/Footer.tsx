@@ -12,7 +12,7 @@ const Footer = () => {
   const handleNavClick = (target: string) => {
     if (target === "/contact") {
       navigate("/contact");
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 100);
       return;
     }
 
@@ -29,11 +29,19 @@ const Footer = () => {
     }
 
     if (location.pathname === "/") {
-      document.getElementById(anchor)?.scrollIntoView({ behavior: "smooth" });
+      const el = document.getElementById(anchor);
+      if (el) {
+        const y = el.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
     } else {
       navigate("/");
       setTimeout(() => {
-        document.getElementById(anchor)?.scrollIntoView({ behavior: "smooth" });
+        const el = document.getElementById(anchor);
+        if (el) {
+          const y = el.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
       }, 300);
     }
   };
@@ -44,6 +52,7 @@ const Footer = () => {
     { label: "Offre", to: "/#offre" },
     { label: "Contact", to: "/contact" },
     { label: "Mentions légales", to: "/mentions-legales" },
+    { label: "CGV", to: "/cgv" },
   ];
 
   return (
@@ -83,9 +92,9 @@ const Footer = () => {
               <button
                 key={link.to}
                 onClick={() => {
-                  if (link.to === "/mentions-legales") {
-                    navigate("/mentions-legales");
-                    window.scrollTo({ top: 0 });
+                  if (link.to === "/mentions-legales" || link.to === "/cgv") {
+                    navigate(link.to);
+                    setTimeout(() => window.scrollTo({ top: 0 }), 100);
                   } else {
                     handleNavClick(link.to);
                   }

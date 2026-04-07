@@ -15,9 +15,9 @@ const AboutSection = () => (
             <h2 className="text-2xl font-bold mb-4">À propos</h2>
             <p className="text-sm text-foreground/80 leading-relaxed">
               Je suis Raphaël, fondateur d'Oraya. En accompagnant des dirigeants de PME, j'ai vu la même anomalie partout :
-              des milliers d'euros gagnés qui ne rentrent jamais, sans que personne ne sache dire pourquoi ni quoi faire.
-              Je ne suis pas un consultant généraliste et Oraya n'est pas un outil de plus. C'est une méthode chirurgicale
-              dédiée à un seul problème, avec un résultat concret et garanti en 10 jours.
+              des <span className="font-semibold text-highlight">milliers d'euros gagnés qui ne rentrent jamais</span>, sans que personne ne sache dire pourquoi ni quoi faire.
+              Je ne suis pas un consultant généraliste et Oraya n'est pas un outil de plus. C'est une <span className="font-semibold text-foreground italic">méthode chirurgicale</span>{" "}
+              dédiée à un seul problème, avec un <span className="font-semibold text-highlight">résultat concret et garanti</span> en 10 jours.
             </p>
           </div>
         </div>

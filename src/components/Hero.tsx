@@ -22,16 +22,20 @@ const Hero = () => (
 
         <ScrollReveal delay={100}>
           <p className="text-foreground/80 text-base lg:text-lg max-w-xl leading-relaxed">
-            Pour les dirigeants de PME B2B qui en ont assez d'avancer l'argent de leurs clients avec leur propre trésorerie.
+            Pour les dirigeants de PME B2B qui en ont assez d'avancer{" "}
+            <span className="font-semibold text-highlight">l'argent de leurs clients</span>{" "}
+            avec leur propre trésorerie.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={150}>
           <p className="text-muted-foreground text-sm max-w-xl leading-relaxed">
-            Oraya identifie combien de cash est bloqué chez vos clients, pourquoi, et vous dit exactement quoi faire cette semaine pour le récupérer.
+            Oraya identifie <span className="font-semibold text-foreground italic">combien de cash est bloqué</span> chez vos clients,{" "}
+            <span className="font-semibold text-foreground italic">pourquoi</span>, et vous dit exactement{" "}
+            <span className="font-semibold text-highlight">quoi faire cette semaine</span> pour le récupérer.
           </p>
           <p className="text-muted-foreground text-sm italic mt-2 max-w-xl">
-            Vous envoyez vos exports. On fait tout le reste. Vous recevez les décisions.
+            Vous envoyez vos exports. On fait tout le reste. <span className="font-semibold text-foreground">Vous recevez les décisions.</span>
           </p>
         </ScrollReveal>
 
