@@ -80,7 +80,7 @@ const Contact = () => {
                   <form onSubmit={handleSubmit} className="p-6 space-y-4">
                     <div className="grid sm:grid-cols-2 gap-4">
                       <div>
-                        <label htmlFor="name" className="block text-sm font-medium mb-1.5">Nom complet</label>
+                        <label htmlFor="name" className="block text-sm font-medium mb-1.5">Nom complet <span className="text-red-500">*</span></label>
                         <input
                           id="name"
                           type="text"
@@ -92,7 +92,7 @@ const Contact = () => {
                         />
                       </div>
                       <div>
-                        <label htmlFor="email" className="block text-sm font-medium mb-1.5">Email</label>
+                        <label htmlFor="email" className="block text-sm font-medium mb-1.5">Email <span className="text-red-500">*</span></label>
                         <input
                           id="email"
                           type="email"
@@ -105,10 +105,11 @@ const Contact = () => {
                       </div>
                     </div>
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-medium mb-1.5">Téléphone</label>
+                      <label htmlFor="phone" className="block text-sm font-medium mb-1.5">Téléphone <span className="text-red-500">*</span></label>
                       <input
                         id="phone"
                         type="tel"
+                        required
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                         className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-highlight/50"
@@ -116,7 +117,7 @@ const Contact = () => {
                       />
                     </div>
                     <div>
-                      <label htmlFor="message" className="block text-sm font-medium mb-1.5">Message</label>
+                      <label htmlFor="message" className="block text-sm font-medium mb-1.5">Message <span className="text-red-500">*</span></label>
                       <textarea
                         id="message"
                         required

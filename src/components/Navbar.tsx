@@ -22,11 +22,19 @@ const Navbar = () => {
     setOpen(false);
     const anchor = to.replace("/", "").replace("#", "");
     if (location.pathname === "/") {
-      document.getElementById(anchor)?.scrollIntoView({ behavior: "smooth" });
+      const el = document.getElementById(anchor);
+      if (el) {
+        const y = el.getBoundingClientRect().top + window.scrollY - 80;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
     } else {
       navigate("/");
       setTimeout(() => {
-        document.getElementById(anchor)?.scrollIntoView({ behavior: "smooth" });
+        const el = document.getElementById(anchor);
+        if (el) {
+          const y = el.getBoundingClientRect().top + window.scrollY - 80;
+          window.scrollTo({ top: y, behavior: "smooth" });
+        }
       }, 300);
     }
   };
@@ -40,7 +48,6 @@ const Navbar = () => {
           <img src={logoOraya} alt="Oraya" className="h-36 w-auto" />
         </Link>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-8 flex-1 justify-center">
           {navLinks.map((link) =>
             isAnchor(link.to) ? (
@@ -82,7 +89,7 @@ const Navbar = () => {
             href="https://tally.so/r/gD4dOM"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-cta text-cta-foreground px-5 py-2 rounded-lg text-sm font-semibold hover:bg-cta-hover transition-colors"
+            className="bg-cta text-cta-foreground px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-xl hover:shadow-cta/50 hover:-translate-y-0.5 hover:scale-[1.03] active:scale-[0.97]"
           >
             Démarrer
           </a>
@@ -97,13 +104,11 @@ const Navbar = () => {
           </a>
         </div>
 
-        {/* Mobile toggle */}
         <button className="md:hidden text-foreground" onClick={() => setOpen(!open)}>
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
         <div className="md:hidden border-t border-border bg-background px-4 pb-4">
           {navLinks.map((link) =>
@@ -140,7 +145,7 @@ const Navbar = () => {
               href="https://tally.so/r/gD4dOM"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 bg-cta text-cta-foreground px-5 py-2.5 rounded-lg text-sm font-semibold text-center hover:bg-cta-hover transition-colors"
+              className="flex-1 bg-cta text-cta-foreground px-5 py-2.5 rounded-lg text-sm font-semibold text-center transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-xl hover:shadow-cta/50 active:scale-[0.97]"
             >
               Démarrer
             </a>

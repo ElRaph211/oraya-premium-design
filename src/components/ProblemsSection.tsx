@@ -5,20 +5,20 @@ const cards = [
   {
     icon: TrendingDown,
     badge: "Trésorerie sous tension",
-    title: "Vous financez vos clients sans le vouloir",
-    text: "Vous travaillez, vous facturez, mais le cash ne suit pas. Vos clients vous paient en retard pendant qu'on vous réclame charges, salaires et fournisseurs sans délai.",
+    title: <>Vous <span className="text-highlight italic">financez vos clients</span> sans le vouloir</>,
+    text: <>Vous travaillez, vous facturez, mais <span className="font-semibold text-foreground">le cash ne suit pas</span>. Vos clients vous paient en retard pendant qu'on vous réclame charges, salaires et fournisseurs sans délai.</>,
   },
   {
     icon: EyeOff,
     badge: "Manque de visibilité",
-    title: "Vous ne savez pas ce qui bloque vraiment",
-    text: "Vous savez que certains clients paient en retard. Mais lesquels vous coûtent le plus ? Sans analyse précise, impossible de savoir où agir en priorité.",
+    title: <>Vous ne savez pas <span className="text-highlight italic">ce qui bloque vraiment</span></>,
+    text: <>Vous savez que certains clients paient en retard. Mais <span className="font-semibold text-foreground">lesquels vous coûtent le plus ?</span> Sans analyse précise, impossible de savoir où agir en priorité.</>,
   },
   {
     icon: Hourglass,
     badge: "Inaction subie",
-    title: "Vous ne savez pas par où commencer",
-    text: "Relancer tout le monde de la même manière ne fonctionne pas. Ce qui manque : savoir quel client bloque combien et quoi faire concrètement cette semaine.",
+    title: <>Vous ne savez pas <span className="text-highlight italic">par où commencer</span></>,
+    text: <>Relancer tout le monde de la même manière ne fonctionne pas. Ce qui manque : savoir <span className="font-semibold text-foreground">quel client bloque combien</span> et quoi faire concrètement cette semaine.</>,
   },
 ];
 
@@ -28,10 +28,11 @@ const ProblemsSection = () => (
       <ScrollReveal>
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
-            9 dirigeants sur 10 avancent l'argent de leurs clients sans le mesurer.
+            9 dirigeants sur 10 avancent l'argent de leurs clients{" "}
+            <span className="text-highlight italic">sans le mesurer.</span>
           </h2>
           <p className="text-muted-foreground">
-            15 milliards d'euros bloqués chaque année dans les retards de paiement des PME françaises.
+            <span className="font-semibold text-foreground">15 milliards d'euros</span> bloqués chaque année dans les retards de paiement des PME françaises.
           </p>
         </div>
       </ScrollReveal>

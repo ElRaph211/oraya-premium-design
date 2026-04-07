@@ -2,10 +2,10 @@ import { ClipboardList, Phone, BarChart3, Presentation, CheckCircle } from "luci
 import ScrollReveal from "./ScrollReveal";
 
 const steps = [
-  { icon: ClipboardList, day: "Jour 0", title: "Éligibilité", text: "Vous répondez à quelques questions en 2 minutes." },
+  { icon: ClipboardList, day: "Jour 0", title: "Éligibilité", text: <>Vous répondez à quelques questions en <span className="font-semibold text-foreground">2 minutes</span>.</> },
   { icon: Phone, day: "Jour 1", title: "Cadrage", text: "Un appel de 20 minutes. Vous exportez vos factures." },
-  { icon: BarChart3, day: "Jours 2-9", title: "Analyse", text: "On analyse chaque facture. Vous n'avez rien à faire." },
-  { icon: Presentation, day: "Jour 10", title: "Restitution", text: "Votre diagnostic complet + appel de 30 minutes." },
+  { icon: BarChart3, day: "Jours 2-9", title: "Analyse", text: <>On analyse <span className="font-semibold text-foreground">chaque facture</span>. Vous n'avez rien à faire.</> },
+  { icon: Presentation, day: "Jour 10", title: "Restitution", text: <>Votre <span className="font-semibold text-highlight">diagnostic complet</span> + appel de 30 minutes.</> },
   { icon: CheckCircle, day: "J+30", title: "Suivi", text: "Point de contrôle pour mesurer les résultats." },
 ];
 
@@ -14,15 +14,16 @@ const ProcessSteps = () => (
     <div className="section-container max-w-2xl">
       <ScrollReveal>
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">Comment ça se passe concrètement.</h2>
+          <h2 className="text-2xl md:text-3xl font-bold mb-3">
+            Comment ça se passe <span className="text-highlight italic">concrètement.</span>
+          </h2>
           <p className="text-muted-foreground">
-            Un appel pour cadrer. Un formulaire structuré. Votre diagnostic livré en 10 jours.
+            Un appel pour cadrer. Un formulaire structuré. Votre diagnostic livré en <span className="font-semibold text-foreground">10 jours</span>.
           </p>
         </div>
       </ScrollReveal>
 
       <div className="relative">
-        {/* Vertical line */}
         <div className="absolute left-5 top-0 bottom-0 w-px bg-border hidden md:block" />
 
         <div className="space-y-8">
