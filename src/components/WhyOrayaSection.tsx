@@ -16,18 +16,28 @@ const WhyOrayaSection = () => (
         </h2>
       </ScrollReveal>
 
-      <div className="grid md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-        {rows.map((row, i) => (
-          <ScrollReveal key={i} delay={i * 100}>
-            <div className="bg-background rounded-xl border border-border p-5 h-full">
-              <p className="text-sm text-muted-foreground mb-2 italic">"{row.problem}"</p>
-              <p className="text-sm font-semibold text-highlight">→ {row.solution}</p>
-            </div>
-          </ScrollReveal>
-        ))}
-      </div>
+      <ScrollReveal delay={50}>
+        <div className="rounded-2xl border border-border overflow-hidden max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
+            {rows.slice(0, 2).map((row, i) => (
+              <div key={i} className="p-6 md:p-8 hover:bg-background/50 transition-colors">
+                <p className="text-sm text-muted-foreground mb-3 italic">"{row.problem}"</p>
+                <p className="text-sm font-semibold text-highlight">→ {row.solution}</p>
+              </div>
+            ))}
+          </div>
+          <div className="border-t border-border grid md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
+            {rows.slice(2).map((row, i) => (
+              <div key={i} className="p-6 md:p-8 hover:bg-background/50 transition-colors">
+                <p className="text-sm text-muted-foreground mb-3 italic">"{row.problem}"</p>
+                <p className="text-sm font-semibold text-highlight">→ {row.solution}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </ScrollReveal>
 
-      <ScrollReveal delay={500}>
+      <ScrollReveal delay={200}>
         <p className="text-center text-lg font-bold mt-10">
           Un seul problème. Un plan exact. <span className="text-highlight italic">Garanti.</span>
         </p>
