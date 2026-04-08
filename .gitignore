@@ -17,9 +17,9 @@ bun.lockb
 # Claude Code
 .claude/
 
-# Fichiers sources images (copies dans public/ et src/assets/)
-new_Favicons.png
-bottom_image.png
+# Fichiers sources images à la racine (les copies dans public/ et src/assets/ sont commitées)
+/new_Favicons.png
+/bottom_image.png
 
 # Editor directories and files
 .vscode/*
