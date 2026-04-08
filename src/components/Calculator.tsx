@@ -1,5 +1,6 @@
-import { useState, useCallback } from "react";
+import { useState } from "react";
 import ScrollReveal from "./ScrollReveal";
+import { TALLY_URL } from "@/config/constants";
 
 const FINANCE_RATE = 0.05;
 
@@ -153,6 +154,24 @@ const Calculator = () => {
                 <p className="text-[11px] opacity-45 leading-snug">{roiText}</p>
               </div>
             </div>
+          </div>
+
+          {/* CTA after calculator */}
+          <div className="mt-8 text-center bg-cta/10 border border-cta/20 rounded-xl p-6">
+            <p className="text-sm font-semibold text-foreground mb-1">
+              Votre cash bloqué estimé : <span className="text-highlight text-lg font-extrabold">{fmt(cashBlocked)}</span>
+            </p>
+            <p className="text-xs text-muted-foreground mb-4">
+              Découvrez exactement où il se bloque et comment le récupérer en 10 jours.
+            </p>
+            <a
+              href={TALLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-cta text-cta-foreground px-7 py-3 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97] animate-cta-glow"
+            >
+              Vérifier mon éligibilité — 2 minutes
+            </a>
           </div>
 
           <div className="text-center mt-6">
