@@ -17,7 +17,7 @@ const Hero = () => (
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
             Vos clients vous doivent de l'argent.
             <br />
-            <span className="text-highlight">On vous dit combien — et comment le récupérer.</span>
+            <span className="text-highlight">Nous vous aidons à le récupérer.</span>
           </h1>
         </ScrollReveal>
 
@@ -32,8 +32,9 @@ const Hero = () => (
         <ScrollReveal delay={150}>
           <p className="text-muted-foreground text-sm max-w-xl leading-relaxed">
             On analyse vos factures <span className="font-semibold text-foreground italic">une par une</span>. En 10 jours, vous savez exactement{" "}
-            <span className="font-semibold text-foreground italic">où est votre cash</span> et{" "}
-            <span className="font-semibold text-highlight">quoi faire cette semaine</span>.{" "}
+            <span className="font-semibold text-foreground italic">combien</span>,{" "}
+            <span className="font-semibold text-foreground italic">pourquoi</span>, et{" "}
+            <span className="font-semibold text-highlight">quoi faire</span>.{" "}
             Prix fixe. <span className="font-semibold text-foreground">Garanti ou gratuit.</span>
           </p>
           <p className="text-muted-foreground text-sm italic mt-2 max-w-xl">
