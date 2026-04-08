@@ -17,7 +17,7 @@ const Hero = () => (
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
             Vos clients vous doivent de l'argent.
             <br />
-            <span className="text-highlight">On vous dit combien — et comment le récupérer.</span>
+            <span className="text-highlight">Nous vous aidons à le récupérer.</span>
           </h1>
         </ScrollReveal>
 
