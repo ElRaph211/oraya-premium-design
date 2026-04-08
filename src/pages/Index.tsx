@@ -18,7 +18,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 const Index = () => (
   <>
     <Helmet>
-      <title>Oraya — Encaissez plus vite</title>
+      <title>Oraya | Diagnostic retards de paiement PME - Récupérez votre cash en 10 jours</title>
       <meta name="description" content="Diagnostic retards de paiement pour PME B2B. Identifiez votre cash bloqué et récupérez-le en 10 jours." />
     </Helmet>
     <Navbar />

@@ -44,7 +44,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
       <div className="section-container flex items-center justify-between h-20">
         <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex-shrink-0">
-          <img src={logoOraya} alt="Oraya" className="h-36 w-auto" />
+          <img src={logoOraya} alt="Oraya" className="h-72 w-auto" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8 flex-1 justify-center">

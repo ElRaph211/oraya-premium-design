@@ -1,5 +1,5 @@
 import { useNavigate, useLocation } from "react-router-dom";
-import logoOraya from "@/assets/logo-oraya.png";
+import bottomImage from "@/assets/bottom_image.png";
 import { WHATSAPP_URL, LINKEDIN_URL, INSTAGRAM_URL, EMAIL } from "@/config/constants";
 
 const Footer = () => {
@@ -58,7 +58,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
           <div className="space-y-3">
             <button onClick={() => handleNavClick("/")} className="block">
-              <img src={logoOraya} alt="Oraya" className="h-36 w-auto brightness-0 invert" />
+              <img src={bottomImage} alt="Oraya" className="h-36 w-auto" />
             </button>
             <p className="text-sm opacity-70 max-w-xs">
               Diagnostic retards de paiement pour PME B2B
