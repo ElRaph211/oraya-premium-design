@@ -4,22 +4,67 @@ import ScrollReveal from "./ScrollReveal";
 import { TALLY_URL } from "@/config/constants";
 
 const includes = [
-  "12 mois de facturation analysés, facture par facture",
-  "Chaque client classé par niveau de risque avec un score dédié",
-  "Les causes précises de vos retards identifiées",
-  "Un plan d'action priorisé avec messages de relance calibrés par client",
-  "Projection de vos encaissements à J+30 / J+60 / J+90",
-  "Deux appels avec notre équipe : cadrage + restitution",
+  "12 mois analysés facture par facture — pas une estimation globale",
+  "Chaque client classé par risque — qui vous coûte combien et pourquoi",
+  "Plan d'action priorisé par impact financier — quoi faire cette semaine",
+  "Scripts de relance personnalisés — copier-coller et envoyer",
+  "Kit de cadrage : modèle CGV + acompte + pénalités — prêt à l'emploi",
+  "2 appels avec notre équipe : cadrage + restitution",
 ];
 
 const detailSections = [
-  { title: "Analyse complète", content: "12 mois de données passées au crible, facture par facture, client par client. Aucune moyenne globale : chaque point de friction est identifié et chiffré." },
-  { title: "Clients passés au crible", content: "Score de risque individuel, historique de paiement, comportement récurrent. Vous savez exactement qui vous coûte combien." },
-  { title: "Causes identifiées", content: "Délais contractuels mal calibrés, CGV non appliquées, absence de relance, litiges non tracés. Chaque cause est documentée." },
-  { title: "Plan d'action", content: "Actions classées par impact financier. Messages de relance rédigés et adaptés au profil de chaque client." },
-  { title: "Projection et pilotage", content: "Vos encaissements prévisionnels à J+30, J+60, J+90. Un tableau de bord synthétique pour piloter la suite." },
-  { title: "Accompagnement", content: "Un appel de cadrage (20 min) + un appel de restitution (30 min) + un point de suivi à J+30." },
-  { title: "Bonus", content: "Modèle de CGV optimisé pour réduire structurellement vos délais de paiement." },
+  {
+    title: "Analyse complète",
+    items: [
+      "12 mois de facturation passés au crible, facture par facture, client par client",
+      "Le montant exact de cash immobilisé, calculé en euros",
+      "Votre positionnement par rapport aux PME de votre secteur",
+    ],
+  },
+  {
+    title: "Clients passés au crible",
+    items: [
+      "Score de risque par client basé sur l'historique de paiement",
+      "Les clients qui concentrent l'essentiel de vos retards identifiés",
+      "Comportement récurrent documenté",
+    ],
+  },
+  {
+    title: "Causes identifiées",
+    items: [
+      "Pourquoi ça bloque : process interne, CGV, comportement client",
+      "Les corrections structurelles à apporter",
+    ],
+  },
+  {
+    title: "Plan d'action",
+    items: [
+      "Les 3 actions qui libèrent le plus de trésorerie dans les 90 jours",
+      "L'ordre de priorité exact pour vos relances",
+      "Un script de relance calibré pour chaque client à traiter",
+    ],
+  },
+  {
+    title: "Projection et pilotage",
+    items: [
+      "Encaissements prévisionnels à J+30 / J+60 / J+90",
+      "Tableau de bord synthétique pour piloter la suite",
+    ],
+  },
+  {
+    title: "Accompagnement",
+    items: [
+      "Appel de cadrage 20 min + restitution 30 min",
+      "Point de suivi à J+30",
+    ],
+  },
+  {
+    title: "Bonus",
+    items: [
+      "Modèle de CGV optimisé pour votre secteur",
+      "Modèle clause acompte + pénalités de retard",
+    ],
+  },
 ];
 
 const OffreSection = () => {
@@ -64,7 +109,7 @@ const OffreSection = () => {
                 onClick={() => setShowDetail(!showDetail)}
                 className="flex items-center justify-center gap-1 mx-auto text-sm font-medium text-highlight hover:underline mb-6 transition-colors"
               >
-                Voir le détail complet
+                {showDetail ? "Masquer le détail" : "Voir le détail complet ↓"}
                 {showDetail ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
               </button>
 
@@ -72,8 +117,15 @@ const OffreSection = () => {
                 <div className="text-left space-y-5 mb-6 border-t border-border pt-6">
                   {detailSections.map((section, i) => (
                     <div key={i}>
-                      <p className="font-semibold text-sm text-foreground mb-1">{section.title}</p>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{section.content}</p>
+                      <p className="font-semibold text-sm text-foreground mb-2">{section.title}</p>
+                      <ul className="space-y-1">
+                        {section.items.map((item, j) => (
+                          <li key={j} className="flex items-start gap-2 text-sm text-muted-foreground leading-relaxed">
+                            <span className="text-highlight mt-0.5">→</span>
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   ))}
                 </div>

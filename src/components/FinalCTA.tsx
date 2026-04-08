@@ -3,10 +3,19 @@ import { TALLY_URL } from "@/config/constants";
 
 const FinalCTA = () => (
   <section className="section-padding bg-secondary/50">
-    <div className="section-container max-w-xl text-center">
+    <div className="section-container max-w-2xl text-center">
       <ScrollReveal>
-        <p className="text-xl md:text-2xl font-semibold text-primary leading-snug mb-6">
-          Sans mesure, pas de recul.<br />Sans recul, <span className="text-highlight italic">pas de correction.</span>
+        <p className="text-base md:text-lg text-foreground/80 leading-relaxed mb-6">
+          Demain matin, votre plus gros client vous devra toujours le même montant.
+          Vous ne saurez toujours pas exactement combien.
+          Vous relancerez au hasard, en espérant que ça rentre.
+        </p>
+        <p className="text-lg md:text-xl font-semibold text-primary leading-snug mb-2">
+          Chaque mois sans diagnostic, c'est du cash qui reste{" "}
+          <span className="text-highlight italic">bloqué gratuitement.</span>
+        </p>
+        <p className="text-sm font-semibold text-foreground mb-8">
+          10 jours. <span className="text-highlight">Garanti Oraya.</span>
         </p>
         <a
           href={TALLY_URL}

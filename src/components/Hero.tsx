@@ -5,8 +5,8 @@ import { TALLY_URL } from "@/config/constants";
 
 const badges = [
   { icon: Clock, label: "Livré en 10 jours" },
-  { icon: ShieldCheck, label: "Prix fixe garanti" },
-  { icon: Monitor, label: "Aucun outil à installer" },
+  { icon: ShieldCheck, label: "Prix fixe 2 500€" },
+  { icon: Monitor, label: "Garanti 2x ou gratuit" },
 ];
 
 const Hero = () => (
@@ -15,25 +15,26 @@ const Hero = () => (
       <div className="md:col-span-3 space-y-6">
         <ScrollReveal>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
-            Encaissez plus vite,
+            Vos clients vous doivent de l'argent.
             <br />
-            <span className="text-highlight italic">sans courir après vos clients.</span>
+            <span className="text-highlight">On vous dit combien — et comment le récupérer.</span>
           </h1>
         </ScrollReveal>
 
         <ScrollReveal delay={100}>
           <p className="text-foreground/80 text-base lg:text-lg max-w-xl leading-relaxed">
-            Pour les dirigeants de PME B2B qui en ont assez d'avancer{" "}
-            <span className="font-semibold text-highlight">l'argent de leurs clients</span>{" "}
+            Pour les dirigeants de PME B2B qui en ont assez de{" "}
+            <span className="font-semibold text-highlight italic">financer l'activité de leurs clients</span>{" "}
             avec leur propre trésorerie.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={150}>
           <p className="text-muted-foreground text-sm max-w-xl leading-relaxed">
-            Oraya identifie <span className="font-semibold text-foreground italic">combien de cash est bloqué</span> chez vos clients,{" "}
-            <span className="font-semibold text-foreground italic">pourquoi</span>, et vous dit exactement{" "}
-            <span className="font-semibold text-highlight">quoi faire cette semaine</span> pour le récupérer.
+            On analyse vos factures <span className="font-semibold text-foreground italic">une par une</span>. En 10 jours, vous savez exactement{" "}
+            <span className="font-semibold text-foreground italic">où est votre cash</span> et{" "}
+            <span className="font-semibold text-highlight">quoi faire cette semaine</span>.{" "}
+            Prix fixe. <span className="font-semibold text-foreground">Garanti ou gratuit.</span>
           </p>
           <p className="text-muted-foreground text-sm italic mt-2 max-w-xl">
             Vous envoyez vos exports. On fait tout le reste. <span className="font-semibold text-foreground">Vous recevez les décisions.</span>

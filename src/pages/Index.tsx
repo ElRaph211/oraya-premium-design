@@ -3,6 +3,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
 import ProblemsSection from "@/components/ProblemsSection";
+import StatsSection from "@/components/StatsSection";
+import WhyOrayaSection from "@/components/WhyOrayaSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import SystemeSection from "@/components/SystemeSection";
 import Calculator from "@/components/Calculator";
@@ -23,6 +25,8 @@ const Index = () => (
     <main>
       <Hero />
       <ProblemsSection />
+      <StatsSection />
+      <WhyOrayaSection />
       <ComparisonSection />
       <SystemeSection />
       <Calculator />
