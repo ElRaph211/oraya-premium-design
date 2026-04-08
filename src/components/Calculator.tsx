@@ -155,6 +155,24 @@ const Calculator = () => {
             </div>
           </div>
 
+          {/* CTA after calculator */}
+          <div className="mt-8 text-center bg-cta/10 border border-cta/20 rounded-xl p-6">
+            <p className="text-sm font-semibold text-foreground mb-1">
+              Votre cash bloqué estimé : <span className="text-highlight text-lg font-extrabold">{fmt(cashBlocked)}</span>
+            </p>
+            <p className="text-xs text-muted-foreground mb-4">
+              Découvrez exactement où il se bloque et comment le récupérer en 10 jours.
+            </p>
+            <a
+              href={TALLY_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-cta text-cta-foreground px-7 py-3 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97] animate-cta-glow"
+            >
+              Vérifier mon éligibilité — 2 minutes
+            </a>
+          </div>
+
           <div className="text-center mt-6">
             <p className="text-[10px] text-muted-foreground leading-snug">
               Sources : Banque de France / Altares 2025 — Retard moyen constaté : 14,1 jours au-delà des conditions contractuelles · 68 500 défaillances d'entreprises en 2025
