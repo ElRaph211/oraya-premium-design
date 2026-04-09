@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
-      <div className="section-container flex items-center justify-between h-20">
+      <div className="section-container flex items-center justify-between h-20 relative">
         <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex-shrink-0 mr-auto">
           <img src={logoOraya} alt="Oraya" className="h-72 w-auto" />
         </Link>
