@@ -12,7 +12,7 @@ import { WHATSAPP_URL, LINKEDIN_URL, INSTAGRAM_URL, EMAIL } from "@/config/const
 const schema = z.object({
   name: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
   email: z.string().email("Adresse email invalide"),
-  phone: z.string().optional(),
+  phone: z.string().min(10, "Le numéro de téléphone doit contenir au moins 10 chiffres"),
   message: z.string().min(10, "Le message doit contenir au moins 10 caractères"),
 });
 
@@ -123,14 +123,15 @@ const Contact = () => {
                         </div>
                       </div>
                       <div>
-                        <label htmlFor="phone" className="block text-sm font-medium mb-1.5">Téléphone</label>
+                        <label htmlFor="phone" className="block text-sm font-medium mb-1.5">Téléphone <span className="text-red-500">*</span></label>
                         <input
                           id="phone"
                           type="tel"
                           {...register("phone")}
-                          className="w-full rounded-lg border border-border bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-highlight/50"
+                          className={`w-full rounded-lg border bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-highlight/50 ${errors.phone ? "border-red-400" : "border-border"}`}
                           placeholder="06 12 34 56 78"
                         />
+                        {errors.phone && <p className="text-xs text-red-500 mt-1">{errors.phone.message}</p>}
                       </div>
                       <div>
                         <label htmlFor="message" className="block text-sm font-medium mb-1.5">Message <span className="text-red-500">*</span></label>

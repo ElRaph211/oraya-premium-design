@@ -11,7 +11,7 @@ const WhyOrayaSection = () => (
   <section className="section-padding bg-secondary/50">
     <div className="section-container">
       <ScrollReveal>
-        <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
+        <h2 className="text-2xl md:text-3xl font-extrabold text-center mb-10">
           Pourquoi <span className="text-highlight italic">Oraya</span> ?
         </h2>
       </ScrollReveal>

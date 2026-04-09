@@ -16,7 +16,7 @@ const SystemeSection = () => (
     <div className="section-container">
       <ScrollReveal>
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <p className="text-xs font-semibold uppercase tracking-widest text-highlight mb-3">Le système</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-highlight mb-3">Le système Oraya</p>
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Un diagnostic structuré orienté{" "}
             <span className="text-highlight italic">résultats</span>
