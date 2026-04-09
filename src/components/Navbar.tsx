@@ -6,8 +6,8 @@ import { WHATSAPP_URL, TALLY_URL } from "@/config/constants";
 
 const navLinks = [
   { label: "Accueil", to: "/" },
-  { label: "Système", to: "/#systeme" },
-  { label: "Offre", to: "/#offre" },
+  { label: "Système", to: "/systeme" },
+  { label: "Offre", to: "/offre" },
   { label: "FAQ", to: "/#faq" },
   { label: "Contact", to: "/contact" },
 ];
