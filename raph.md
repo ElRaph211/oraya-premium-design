@@ -1,6 +1,6 @@
 # Oraya — Notes & instructions pour le collègue
 
-Dernière mise à jour : 08/04/2026
+Dernière mise à jour : 10/04/2026
 
 ---
 
@@ -8,7 +8,7 @@ Dernière mise à jour : 08/04/2026
 
 ### Travaux techniques terminés
 - Routes `/offre` et `/systeme` routées dans l'app
-- SEO complet : canonical, og:image placeholder, twitter cards, JSON-LD
+- SEO complet : canonical, og:image, twitter cards, JSON-LD
 - Helmet avec titre unique sur chaque page
 - `sitemap.xml` créé (5 URLs)
 - `_headers` sécurité Cloudflare Pages (X-Frame-Options, etc.)
@@ -17,97 +17,82 @@ Dernière mise à jour : 08/04/2026
 - Validation Zod + react-hook-form sur le formulaire contact
 - Google Fonts auto-hébergé dans `public/fonts/` (plus de requête Google)
 - TypeScript `strict: true`
-- Photo Raphaël compressée (1 Mo → 34 Ko) ✅ fait via Lovable
-- Favicons HD ✅ fait via Lovable
-- `StatsSection` + `WhyOrayaSection` ajoutées ✅ fait via Lovable
+- Photo Raphaël compressée (1 Mo → 34 Ko) ✅
+- Favicons HD ✅
+- `StatsSection` + `WhyOrayaSection` ajoutées ✅
 - Nouveau favicon (`new_Favicons.png`) en place
 - Logo footer remplacé par `bottom_image.png`
 - Logo navbar doublé en taille
-- Titre SEO mis à jour : "Oraya | Diagnostic retards de paiement PME - Récupérez votre cash en 10 jours"
-- Fix SEO "0 words / no H1" : bloc `<noscript>` avec contenu statique ajouté dans `index.html`
+- Titre SEO : "Oraya | Diagnostic retards de paiement PME - Récupérez votre cash en 10 jours"
+- Fix SEO "0 words / no H1" : bloc `<noscript>` avec contenu statique dans `index.html`
+- **`og-image.png`** en place dans `public/` ✅ (OG_image_PNG.png déplacé)
+- **`ProcessSteps`** rendu interactif : chaque étape est cliquable et affiche son image ✅
+  - Images : `etape_1.png` à `etape_5.png` dans `src/assets/`
+  - `etape_2_1.png` également dans `src/assets/` (image alternative étape 2 — non utilisée pour l'instant)
+  - Image active s'anime à chaque changement d'étape
 
 ---
 
-## 🎯 TÂCHE PRIORITAIRE POUR LE COLLÈGUE — og-image.png
+## ⚠️ Point d'attention — etape_4.png
 
-### C'est quoi ?
-L'image qui s'affiche quand on partage le lien `orayasystem.fr` sur LinkedIn, WhatsApp, Twitter, iMessage. Sans elle, le partage du lien affiche un aperçu vide ou moche.
+`etape_4.png` pèse **992 Ko** — c'est lourd pour une image web. À compresser avant le déploiement final.
 
-### Ce qu'il faut créer
-- **Format :** PNG
-- **Dimensions :** 1200 × 630 pixels (obligatoire — c'est le standard OpenGraph)
-- **Nom du fichier :** `og-image.png`
-- **Où le mettre :** dossier `public/` à la racine du projet
-
-### Contenu suggéré pour l'image
-```
-Fond : bleu marine (couleur primary du site, #1a2e4a ou similaire)
-Logo Oraya centré ou en haut à gauche
-Texte principal : "Récupérez votre cash bloqué en 10 jours"
-Sous-texte : "Diagnostic retards de paiement pour PME B2B"
-Éventuellement : badge "Prix fixe 2 500€ · Garanti 2x ou gratuit"
-```
-
-### Comment la créer (outil recommandé)
-1. Aller sur **https://canva.com**
-2. Nouveau design → "Dimensions personnalisées" → 1200 × 630 px
-3. Créer le visuel avec les éléments ci-dessus
-4. Exporter en PNG
-5. Renommer le fichier `og-image.png`
-6. Le placer dans le dossier `public/` du projet
-7. Commiter et pusher
-
-### Pourquoi c'est important
-Le lien `<meta property="og:image" content="/og-image.png" />` est déjà dans le code.
-Le fichier est juste absent. Dès qu'il sera mis en place, tous les partages du lien afficheront l'image automatiquement.
+**Outil recommandé :** [squoosh.app](https://squoosh.app)
+- Ouvrir `src/assets/etape_4.png`
+- Format : WebP ou PNG optimisé
+- Cible : < 200 Ko sans perte de qualité visible
+- Remplacer le fichier dans `src/assets/`
 
 ---
 
-## Ce qui reste à faire (autres tâches)
+## Ce qui reste à faire
 
-### À faire dans le code
-
-| Priorité | Tâche | Détail |
-|----------|-------|--------|
-| Haute | **og-image.png** | Voir section ci-dessus |
-| Haute | **Google Search Console** | Inscrire `orayasystem.fr`, soumettre `https://orayasystem.fr/sitemap.xml` |
-| Moyenne | **Analytics** | Installer Plausible (RGPD-friendly, ~9€/mois, pas de bandeau cookie) ou Umami (gratuit) |
-| Moyenne | **Formulaire contact → vrai envoi d'email** | Le formulaire actuel ouvre le client mail (`mailto:`). Sur mobile sans client mail configuré, ça ne fonctionne pas. Alternatives : Resend, EmailJS, ou rediriger vers Tally |
-| Basse | **Nettoyage composants shadcn/ui** | ~60 composants inutilisés dans `src/components/ui/` — alourdit le JS bundle |
-| Basse | **Tests** | Infrastructure Vitest + Playwright en place, 0 test réel écrit |
-
-### À faire sur Lovable
+### Priorité haute
 
 | Tâche | Détail |
 |-------|--------|
-| **Témoignages clients** | Ajouter une section avec 2-3 citations clients — fort impact sur la conversion. Format : nom + rôle + citation courte |
-| **Page 404** | La page NotFound existe mais est basique. Ajouter un lien retour home et un message de marque |
-| **Navigation** | Les liens "Système" et "Offre" dans la navbar pointent vers des ancres (`/#systeme`, `/#offre`). Décider si on préfère pointer vers les pages dédiées `/systeme` et `/offre` |
+| **Compression etape_4.png** | 992 Ko → cible < 200 Ko. Voir ci-dessus |
+| **Google Search Console** | Inscrire `orayasystem.fr`, soumettre `https://orayasystem.fr/sitemap.xml` |
+
+### Priorité moyenne
+
+| Tâche | Détail |
+|-------|--------|
+| **Formulaire contact → vrai envoi email** | Le formulaire ouvre le client mail (`mailto:`). Sur mobile sans client mail configuré, ça casse. Alternatives : Resend, EmailJS, ou rediriger vers Tally |
+| **Analytics** | Plausible (~9€/mois, RGPD-friendly, pas de bandeau cookie) ou Umami (gratuit, auto-hébergé) |
+| **Témoignages clients** | Ajouter 2-3 citations clients — fort impact conversion. Format : nom + rôle + citation courte |
+| **etape_2_1.png** | Image alternative pour l'étape 2 (Cadrage) dans `src/assets/`. Décider si on l'intègre dans le ProcessSteps (carrousel ? toggle ?) ou si on la garde pour un autre usage |
+
+### Priorité basse
+
+| Tâche | Détail |
+|-------|--------|
+| **Page 404** | Basique. Ajouter lien retour home + message de marque |
+| **Nettoyage shadcn/ui** | ~60 composants inutilisés dans `src/components/ui/` — alourdit le JS bundle |
+| **Tests** | Infrastructure Vitest + Playwright en place, 0 test réel écrit |
+| **SSR / prérendu** | Si le SEO devient critique. Chantier lourd, à envisager plus tard |
 
 ---
 
 ## Notes techniques importantes
 
 ### SEO — comprendre le problème "0 words / no H1"
-Le site est une **SPA React** (Single Page Application). Le HTML servi par le serveur contient juste `<div id="root"></div>` vide. Le contenu (H1, textes) s'affiche uniquement après exécution du JavaScript.
+Le site est une **SPA React** (Single Page Application). Le HTML servi par le serveur contient juste `<div id="root"></div>`. Le contenu s'affiche uniquement après exécution du JavaScript.
 
-**Résultat :** les outils SEO basiques qui n'exécutent pas JS voient une page vide.
+**Ce qui a été fait :** bloc `<noscript>` dans `index.html` avec H1 et textes clés.
 
-**Ce qui a été fait :** ajout d'un bloc `<noscript>` dans `index.html` avec H1 et textes clés — visible pour les crawlers sans JS.
-
-**Ce qui reste :** Google lui-même exécute JavaScript et voit bien le contenu. Les autres moteurs (Bing, DuckDuckGo) aussi. Les outils de test SEO en ligne (Seobility, etc.) parfois non — c'est une limitation de l'architecture SPA, pas un bug.
-
-**La vraie solution** si le SEO devient critique : passer à du prérendu (SSR ou SSG). C'est un chantier plus lourd, à envisager si le trafic organique devient un canal important.
+**Ce qui reste :** Google exécute JS et voit bien le contenu. Les outils de test SEO basiques parfois non — c'est une limitation de l'architecture SPA, pas un bug.
 
 ### Cloudflare Pages — points d'attention
-- `public/_headers` → headers de sécurité (automatiquement lus par Cloudflare)
-- `public/_redirects` → SPA fallback (toutes les URLs → `index.html`) → **ne pas supprimer**
+- `public/_headers` → headers de sécurité (lus automatiquement par Cloudflare)
+- `public/_redirects` → SPA fallback (toutes URLs → `index.html`) → **ne pas supprimer**
 - `public/sitemap.xml` → accessible sur `https://orayasystem.fr/sitemap.xml`
-- Pas de `bun.lockb` dans le repo → Cloudflare utilise npm (c'est voulu)
+- `public/og-image.png` → image de partage LinkedIn/WhatsApp/Twitter
+- Pas de `bun.lockb` dans le repo → Cloudflare utilise npm (voulu)
 
 ### Constantes centralisées
 Toutes les URLs et infos de contact sont dans `src/config/constants.ts`.
-**Ne jamais écrire ces valeurs en dur dans les composants**, toujours importer depuis ce fichier :
+**Ne jamais écrire ces valeurs en dur dans les composants** :
 ```ts
 import { EMAIL, WHATSAPP_URL, TALLY_URL, LINKEDIN_URL, INSTAGRAM_URL } from "@/config/constants";
 ```
@@ -118,7 +103,7 @@ import { EMAIL, WHATSAPP_URL, TALLY_URL, LINKEDIN_URL, INSTAGRAM_URL } from "@/c
 
 ```bash
 npm run dev        # Lancer en local (port 8080)
-npm run build      # Build de production
+npm run build      # Build de production (vérifier qu'il passe avant de push)
 npm run preview    # Tester le build → ouvrir http://localhost:4173/
 git add -A && git commit -m "..." && git push  # Pusher sur Cloudflare
 ```
