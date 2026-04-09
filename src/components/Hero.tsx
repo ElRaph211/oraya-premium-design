@@ -2,6 +2,9 @@ import { Clock, ShieldCheck, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
 import ScrollReveal from "./ScrollReveal";
 import { TALLY_URL } from "@/config/constants";
+import diagCover from "@/assets/diagnostic-cover.jpg";
+import diagKpi from "@/assets/diagnostic-kpi.jpg";
+import diagCost from "@/assets/diagnostic-cost.jpg";
 
 const badges = [
   { icon: Clock, label: "Livré en 10 jours" },
@@ -36,9 +39,6 @@ const Hero = () => (
             <span className="font-semibold text-foreground italic">pourquoi</span>, et{" "}
             <span className="font-semibold text-highlight">quoi faire</span>.{" "}
             Prix fixe. <span className="font-semibold text-foreground">Garanti ou gratuit.</span>
-          </p>
-          <p className="text-muted-foreground text-sm italic mt-2 max-w-xl">
-            Vous envoyez vos exports. On fait tout le reste. <span className="font-semibold text-foreground">Vous recevez les décisions.</span>
           </p>
         </ScrollReveal>
 
@@ -79,16 +79,21 @@ const Hero = () => (
 
       <div className="md:col-span-2">
         <ScrollReveal delay={300}>
-          <div className="bg-secondary rounded-2xl shadow-lg border border-border aspect-[4/3] flex items-center justify-center">
-            <div className="text-center p-8">
-              <div className="w-12 h-12 rounded-full bg-highlight/10 flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-                </svg>
-              </div>
-              <p className="text-sm font-medium text-muted-foreground">Aperçu du diagnostic</p>
+          <div className="relative w-full" style={{ minHeight: "340px" }}>
+            {/* 3 overlapping diagnostic screenshots */}
+            <div className="absolute top-0 left-0 w-[85%] rounded-xl overflow-hidden shadow-2xl border border-border/30 z-10 transform -rotate-3">
+              <img src={diagCover} alt="Diagnostic Oraya — page de couverture" className="w-full h-auto" loading="lazy" />
+            </div>
+            <div className="absolute top-8 left-[10%] w-[85%] rounded-xl overflow-hidden shadow-2xl border border-border/30 z-20 transform rotate-1">
+              <img src={diagKpi} alt="Diagnostic Oraya — chiffres clés et segmentation" className="w-full h-auto" loading="lazy" />
+            </div>
+            <div className="absolute top-16 left-[5%] w-[85%] rounded-xl overflow-hidden shadow-2xl border border-border/30 z-30 transform rotate-2">
+              <img src={diagCost} alt="Diagnostic Oraya — coût de l'inaction" className="w-full h-auto" loading="lazy" />
             </div>
           </div>
+          <p className="text-muted-foreground text-sm italic mt-4 text-center">
+            Vous envoyez vos exports. On fait tout le reste. <span className="font-semibold text-foreground">Vous recevez les décisions.</span>
+          </p>
         </ScrollReveal>
       </div>
     </div>
