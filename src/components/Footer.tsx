@@ -89,7 +89,7 @@ const Footer = () => {
               <button
                 key={link.to}
                 onClick={() => {
-                  if (link.to === "/mentions-legales" || link.to === "/cgv") {
+                  if (["/mentions-legales", "/cgv", "/systeme", "/offre"].includes(link.to)) {
                     navigate(link.to);
                     setTimeout(() => window.scrollTo({ top: 0 }), 100);
                   } else {
