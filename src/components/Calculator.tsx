@@ -168,7 +168,7 @@ const Calculator = () => {
               href={TALLY_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block bg-cta text-cta-foreground px-7 py-3 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97] animate-cta-glow"
+              className="inline-block bg-cta text-cta-foreground px-7 py-3 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97]"
             >
               Vérifier mon éligibilité — 2 minutes
             </a>

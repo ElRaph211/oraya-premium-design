@@ -1,5 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
-import raphaelPhoto from "@/assets/raphael.jpeg";
+import aboutPhoto from "@/assets/image_for_a_propos.png";
 
 const AboutSection = () => (
   <section className="section-padding bg-secondary/50">
@@ -7,9 +7,9 @@ const AboutSection = () => (
       <ScrollReveal>
         <div className="flex flex-col md:flex-row items-center gap-8">
           <img
-            src={raphaelPhoto}
+            src={aboutPhoto}
             alt="Raphaël, fondateur d'Oraya"
-            className="w-36 h-36 rounded-full object-cover flex-shrink-0 border-2 border-border shadow-sm"
+            className="w-44 h-44 rounded-full object-cover flex-shrink-0 border-2 border-border shadow-sm"
           />
           <div>
             <h2 className="text-2xl font-bold mb-4">À propos</h2>

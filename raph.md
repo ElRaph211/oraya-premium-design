@@ -47,12 +47,14 @@ Dernière mise à jour : 10/04/2026
 
 ## Ce qui reste à faire
 
-### Priorité haute
+### a faire la mano
 
 | Tâche | Détail |
 |-------|--------|
 | **Compression etape_4.png** | 992 Ko → cible < 200 Ko. Voir ci-dessus |
 | **Google Search Console** | Inscrire `orayasystem.fr`, soumettre `https://orayasystem.fr/sitemap.xml` |
+| **Témoignages clients** | Ajouter 2-3 citations clients — fort impact conversion. Format : nom + rôle + citation courte |
+en gros | on prends Umami pour savoir d'où viennent tes visiteurs (LinkedIn ? Google ?), quelle page ils quittent sans cliquer sur le CTA Tally, combien de temps ils restent sur la page Offre. on veut les chiffre Mason! ref a black ops
 
 ### Priorité moyenne
 
@@ -60,7 +62,7 @@ Dernière mise à jour : 10/04/2026
 |-------|--------|
 | **Formulaire contact → vrai envoi email** | Le formulaire ouvre le client mail (`mailto:`). Sur mobile sans client mail configuré, ça casse. Alternatives : Resend, EmailJS, ou rediriger vers Tally |
 | **Analytics** | Plausible (~9€/mois, RGPD-friendly, pas de bandeau cookie) ou Umami (gratuit, auto-hébergé) |
-| **Témoignages clients** | Ajouter 2-3 citations clients — fort impact conversion. Format : nom + rôle + citation courte |
+
 | **etape_2_1.png** | Image alternative pour l'étape 2 (Cadrage) dans `src/assets/`. Décider si on l'intègre dans le ProcessSteps (carrousel ? toggle ?) ou si on la garde pour un autre usage |
 
 ### Priorité basse
@@ -69,19 +71,11 @@ Dernière mise à jour : 10/04/2026
 |-------|--------|
 | **Page 404** | Basique. Ajouter lien retour home + message de marque |
 | **Nettoyage shadcn/ui** | ~60 composants inutilisés dans `src/components/ui/` — alourdit le JS bundle |
-| **Tests** | Infrastructure Vitest + Playwright en place, 0 test réel écrit |
-| **SSR / prérendu** | Si le SEO devient critique. Chantier lourd, à envisager plus tard |
 
 ---
 
 ## Notes techniques importantes
 
-### SEO — comprendre le problème "0 words / no H1"
-Le site est une **SPA React** (Single Page Application). Le HTML servi par le serveur contient juste `<div id="root"></div>`. Le contenu s'affiche uniquement après exécution du JavaScript.
-
-**Ce qui a été fait :** bloc `<noscript>` dans `index.html` avec H1 et textes clés.
-
-**Ce qui reste :** Google exécute JS et voit bien le contenu. Les outils de test SEO basiques parfois non — c'est une limitation de l'architecture SPA, pas un bug.
 
 ### Cloudflare Pages — points d'attention
 - `public/_headers` → headers de sécurité (lus automatiquement par Cloudflare)
@@ -99,11 +93,4 @@ import { EMAIL, WHATSAPP_URL, TALLY_URL, LINKEDIN_URL, INSTAGRAM_URL } from "@/c
 
 ---
 
-## Commandes utiles
 
-```bash
-npm run dev        # Lancer en local (port 8080)
-npm run build      # Build de production (vérifier qu'il passe avant de push)
-npm run preview    # Tester le build → ouvrir http://localhost:4173/
-git add -A && git commit -m "..." && git push  # Pusher sur Cloudflare
-```

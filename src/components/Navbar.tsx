@@ -44,7 +44,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
       <div className="section-container flex items-center justify-between h-20 relative">
         <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex-shrink-0 mr-auto -ml-4">
-          <img src={logoOraya} alt="Oraya" className="h-72 w-auto" />
+          <img src={logoOraya} alt="Oraya" className="h-72 w-auto -mt-1" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
@@ -124,7 +124,9 @@ const Navbar = () => {
                 key={link.to}
                 to={link.to}
                 onClick={() => { setOpen(false); window.scrollTo({ top: 0, behavior: "smooth" }); }}
-                className="block py-3 text-sm font-medium text-foreground hover:text-highlight"
+                className={`block py-3 text-sm font-medium transition-colors hover:text-highlight ${
+                  location.pathname === "/" ? "text-highlight" : "text-foreground"
+                }`}
               >
                 {link.label}
               </Link>
@@ -133,7 +135,9 @@ const Navbar = () => {
                 key={link.to}
                 to={link.to}
                 onClick={() => { setOpen(false); window.scrollTo({ top: 0 }); }}
-                className="block py-3 text-sm font-medium text-foreground hover:text-highlight"
+                className={`block py-3 text-sm font-medium transition-colors hover:text-highlight ${
+                  location.pathname === link.to ? "text-highlight" : "text-foreground"
+                }`}
               >
                 {link.label}
               </Link>
