@@ -1,41 +1,15 @@
 import { useEffect } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
-import { MapPin, Mail, Phone, Send, CheckCircle } from "lucide-react";
-import { WHATSAPP_URL, LINKEDIN_URL, INSTAGRAM_URL, EMAIL } from "@/config/constants";
-
-const schema = z.object({
-  name: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
-  email: z.string().email("Adresse email invalide"),
-  phone: z.string().min(10, "Le numéro de téléphone doit contenir au moins 10 chiffres"),
-  message: z.string().min(10, "Le message doit contenir au moins 10 caractères"),
-});
-
-type FormData = z.infer<typeof schema>;
+import { MapPin, Mail, Phone } from "lucide-react";
+import { WHATSAPP_URL, LINKEDIN_URL, INSTAGRAM_URL, EMAIL, TALLY_URL } from "@/config/constants";
 
 const Contact = () => {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitSuccessful },
-  } = useForm<FormData>({ resolver: zodResolver(schema) });
-
   useEffect(() => {
     window.scrollTo({ top: 0 });
   }, []);
-
-  const onSubmit = (data: FormData) => {
-    const subject = encodeURIComponent(`Contact Oraya — ${data.name}`);
-    const body = encodeURIComponent(
-      `Nom : ${data.name}\nEmail : ${data.email}\nTéléphone : ${data.phone ?? ""}\n\nMessage :\n${data.message}`
-    );
-    window.location.href = `mailto:${EMAIL}?subject=${subject}&body=${body}`;
-  };
 
   return (
     <>
@@ -87,72 +61,19 @@ const Contact = () => {
                 <div className="rounded-xl border border-border overflow-hidden bg-background">
                   <div className="p-6 border-b border-border">
                     <h2 className="font-bold text-lg">Envoyez-nous un message</h2>
-                    <p className="text-sm text-muted-foreground mt-1">Raphaël vous répond sous 24h.</p>
+                    <p className="text-sm text-muted-foreground mt-1">Remplissez le formulaire ci-dessous, Raphaël vous répond sous 24h.</p>
                   </div>
-
-                  {isSubmitSuccessful ? (
-                    <div className="p-6 flex flex-col items-center text-center gap-3">
-                      <CheckCircle className="w-10 h-10 text-highlight" />
-                      <p className="font-semibold text-base">Message envoyé !</p>
-                      <p className="text-sm text-muted-foreground">Votre client mail s'est ouvert. Raphaël vous répond sous 24h.</p>
-                    </div>
-                  ) : (
-                    <form onSubmit={handleSubmit(onSubmit)} noValidate className="p-6 space-y-4">
-                      <div className="grid sm:grid-cols-2 gap-4">
-                        <div>
-                          <label htmlFor="name" className="block text-sm font-medium mb-1.5">Nom complet <span className="text-red-500">*</span></label>
-                          <input
-                            id="name"
-                            type="text"
-                            {...register("name")}
-                            className={`w-full rounded-lg border bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-highlight/50 ${errors.name ? "border-red-400" : "border-border"}`}
-                            placeholder="Jean Dupont"
-                          />
-                          {errors.name && <p className="text-xs text-red-500 mt-1">{errors.name.message}</p>}
-                        </div>
-                        <div>
-                          <label htmlFor="email" className="block text-sm font-medium mb-1.5">Email <span className="text-red-500">*</span></label>
-                          <input
-                            id="email"
-                            type="email"
-                            {...register("email")}
-                            className={`w-full rounded-lg border bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-highlight/50 ${errors.email ? "border-red-400" : "border-border"}`}
-                            placeholder="jean@entreprise.fr"
-                          />
-                          {errors.email && <p className="text-xs text-red-500 mt-1">{errors.email.message}</p>}
-                        </div>
-                      </div>
-                      <div>
-                        <label htmlFor="phone" className="block text-sm font-medium mb-1.5">Téléphone <span className="text-red-500">*</span></label>
-                        <input
-                          id="phone"
-                          type="tel"
-                          {...register("phone")}
-                          className={`w-full rounded-lg border bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-highlight/50 ${errors.phone ? "border-red-400" : "border-border"}`}
-                          placeholder="06 12 34 56 78"
-                        />
-                        {errors.phone && <p className="text-xs text-red-500 mt-1">{errors.phone.message}</p>}
-                      </div>
-                      <div>
-                        <label htmlFor="message" className="block text-sm font-medium mb-1.5">Message <span className="text-red-500">*</span></label>
-                        <textarea
-                          id="message"
-                          rows={4}
-                          {...register("message")}
-                          className={`w-full rounded-lg border bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-highlight/50 resize-none ${errors.message ? "border-red-400" : "border-border"}`}
-                          placeholder="Décrivez votre situation…"
-                        />
-                        {errors.message && <p className="text-xs text-red-500 mt-1">{errors.message.message}</p>}
-                      </div>
-                      <button
-                        type="submit"
-                        className="group w-full bg-cta text-cta-foreground px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/25 hover:shadow-xl hover:shadow-cta/40 hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
-                      >
-                        <Send className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                        Envoyer le message
-                      </button>
-                    </form>
-                  )}
+                  <div className="p-0">
+                    <iframe
+                      data-tally-src={`${TALLY_URL}?transparentBackground=1`}
+                      src={`${TALLY_URL}?transparentBackground=1`}
+                      width="100%"
+                      height="500"
+                      frameBorder="0"
+                      title="Formulaire de contact Oraya"
+                      className="w-full"
+                    />
+                  </div>
                 </div>
               </ScrollReveal>
             </div>

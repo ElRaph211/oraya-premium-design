@@ -3,6 +3,7 @@ import { ClipboardList, Phone, BarChart3, Presentation, CheckCircle } from "luci
 import ScrollReveal from "./ScrollReveal";
 import etape1 from "@/assets/etape_1.png";
 import etape2 from "@/assets/etape_2.png";
+import etape2_1 from "@/assets/etape_2_1.png";
 import etape3 from "@/assets/etape_3.png";
 import etape4 from "@/assets/etape_4.png";
 import etape5 from "@/assets/etape_5.png";
@@ -22,6 +23,10 @@ const steps = [
     title: "Cadrage",
     text: "Un appel de 20 minutes. Vous exportez vos factures.",
     image: etape2,
+    images: [
+      { src: etape2, alt: "Appel de cadrage Oraya — Étape 2" },
+      { src: etape2_1, alt: "Export des factures — Étape 2" },
+    ],
     alt: "Appel de cadrage Oraya — Étape 2",
   },
   {
@@ -52,7 +57,15 @@ const steps = [
 
 const ProcessSteps = () => {
   const [activeStep, setActiveStep] = useState(0);
+  const [imageIndex, setImageIndex] = useState(0);
   const active = steps[activeStep];
+  const hasMultipleImages = !!active.images;
+  const currentImage = hasMultipleImages ? active.images![imageIndex] : { src: active.image, alt: active.alt };
+
+  const handleStepClick = (i: number) => {
+    setActiveStep(i);
+    setImageIndex(0);
+  };
 
   return (
     <section className="section-padding bg-secondary/50">
@@ -81,7 +94,7 @@ const ProcessSteps = () => {
                   return (
                     <button
                       key={i}
-                      onClick={() => setActiveStep(i)}
+                      onClick={() => handleStepClick(i)}
                       className={`w-full text-left flex gap-5 items-start p-3 rounded-xl transition-all duration-200 group ${
                         isActive
                           ? "bg-highlight/10 ring-1 ring-highlight/30"
@@ -130,16 +143,32 @@ const ProcessSteps = () => {
             <div className="sticky top-24">
               <div className="rounded-xl overflow-hidden shadow-2xl border border-border/30 bg-background">
                 <img
-                  key={activeStep}
-                  src={active.image}
-                  alt={active.alt}
+                  key={`${activeStep}-${imageIndex}`}
+                  src={currentImage.src}
+                  alt={currentImage.alt}
                   className="w-full h-auto animate-fade-in-up"
                   loading="lazy"
                 />
               </div>
-              <p className="text-center text-xs text-muted-foreground mt-3">
-                <span className="font-semibold text-highlight">Étape {activeStep + 1}</span> — {active.title}
-              </p>
+              <div className="flex items-center justify-center gap-2 mt-3">
+                <p className="text-xs text-muted-foreground">
+                  <span className="font-semibold text-highlight">Étape {activeStep + 1}</span> — {active.title}
+                </p>
+                {hasMultipleImages && (
+                  <div className="flex gap-1.5 ml-2">
+                    {active.images!.map((_, i) => (
+                      <button
+                        key={i}
+                        onClick={() => setImageIndex(i)}
+                        className={`w-2 h-2 rounded-full transition-colors ${
+                          i === imageIndex ? "bg-highlight" : "bg-border hover:bg-muted-foreground/50"
+                        }`}
+                        aria-label={`Image ${i + 1}`}
+                      />
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </ScrollReveal>
         </div>
