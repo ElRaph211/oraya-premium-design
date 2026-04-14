@@ -1,6 +1,6 @@
 import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
-import logoOraya from "@/assets/logo-oraya.png";
+import logoOraya from "@/assets/logo-new.png";
 
 const NotFound = () => {
   const location = useLocation();
