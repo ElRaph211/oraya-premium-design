@@ -44,7 +44,7 @@ const Navbar = () => {
     <nav className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
       <div className="section-container flex items-center justify-between h-20 relative">
         <Link to="/" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="flex-shrink-0 mr-auto -ml-4 md:-ml-20 relative z-10">
-          <img src={logoOraya} alt="Oraya" className="h-20 md:h-72 w-auto -mt-1" />
+          <img src={logoOraya} alt="Oraya" className="h-32 md:h-72 w-auto -mt-1" />
         </Link>
 
         <div className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
@@ -109,7 +109,7 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="md:hidden border-t border-border bg-background px-4 pb-4">
+        <div className="md:hidden border-t border-border bg-background px-4 pb-4 relative z-20">
           {navLinks.map((link) =>
             isAnchor(link.to) ? (
               <button
