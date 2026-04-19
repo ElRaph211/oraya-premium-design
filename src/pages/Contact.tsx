@@ -6,15 +6,8 @@ import { Helmet } from "react-helmet-async";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ScrollReveal from "@/components/ScrollReveal";
-import { MapPin, Mail, Phone, Send, CheckCircle, AlertCircle } from "lucide-react";
+import { MapPin, Mail, Phone, Send, CheckCircle } from "lucide-react";
 import { WHATSAPP_URL, LINKEDIN_URL, INSTAGRAM_URL, EMAIL } from "@/config/constants";
-
-// ─── Web3Forms ─────────────────────────────────────────────────────────────
-// 1. Aller sur https://web3forms.com
-// 2. Entrer raphael@orayasystem.fr → recevoir la clé par email
-// 3. Remplacer la valeur ci-dessous
-const WEB3FORMS_KEY = "VOTRE_CLE_WEB3FORMS";
-// ───────────────────────────────────────────────────────────────────────────
 
 const schema = z.object({
   name: z.string().min(2, "Le nom doit contenir au moins 2 caractères"),
@@ -26,7 +19,7 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>;
 
 const Contact = () => {
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
+  const [status, setStatus] = useState<"idle" | "success">("idle");
 
   useEffect(() => {
     window.scrollTo({ top: 0 });
@@ -39,31 +32,14 @@ const Contact = () => {
     reset,
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
-  const onSubmit = async (data: FormData) => {
-    setStatus("loading");
-    try {
-      const res = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          access_key: WEB3FORMS_KEY,
-          subject: `Contact Oraya — ${data.name}`,
-          from_name: data.name,
-          email: data.email,
-          phone: data.phone,
-          message: data.message,
-        }),
-      });
-      const json = await res.json();
-      if (json.success) {
-        setStatus("success");
-        reset();
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
+  const onSubmit = (data: FormData) => {
+    const subject = encodeURIComponent(`Contact Oraya — ${data.name}`);
+    const body = encodeURIComponent(
+      `Nom : ${data.name}\nEmail : ${data.email}\nTéléphone : ${data.phone}\n\nMessage :\n${data.message}`
+    );
+    window.open(`mailto:${EMAIL}?subject=${subject}&body=${body}`, "_blank");
+    setStatus("success");
+    reset();
   };
 
   return (
@@ -193,32 +169,12 @@ const Contact = () => {
                         {errors.message && <p className="text-xs text-red-500 mt-1">{errors.message.message}</p>}
                       </div>
 
-                      {status === "error" && (
-                        <div className="flex items-center gap-2 text-sm text-red-500 bg-red-50 border border-red-200 rounded-lg px-4 py-3">
-                          <AlertCircle className="w-4 h-4 flex-shrink-0" />
-                          <span>Une erreur s'est produite. Réessayez ou écrivez directement à <a href={`mailto:${EMAIL}`} className="underline">{EMAIL}</a>.</span>
-                        </div>
-                      )}
-
                       <button
                         type="submit"
-                        disabled={status === "loading"}
-                        className="group w-full bg-cta text-cta-foreground px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/25 hover:shadow-xl hover:shadow-cta/40 hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2 disabled:opacity-60 disabled:pointer-events-none"
+                        className="group w-full bg-cta text-cta-foreground px-6 py-3 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/25 hover:shadow-xl hover:shadow-cta/40 hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2"
                       >
-                        {status === "loading" ? (
-                          <span className="flex items-center gap-2">
-                            <svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24">
-                              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
-                            </svg>
-                            Envoi en cours…
-                          </span>
-                        ) : (
-                          <>
-                            <Send className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                            Envoyer le message
-                          </>
-                        )}
+                        <Send className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
+                        Envoyer le message
                       </button>
                     </form>
                   )}
