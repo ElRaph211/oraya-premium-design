@@ -6,16 +6,13 @@ const FinalCTA = () => (
     <div className="section-container max-w-2xl text-center">
       <ScrollReveal>
         <p className="text-base md:text-lg text-foreground/80 leading-relaxed mb-6">
-          Demain matin, votre plus gros client vous devra toujours le même montant.
-          Vous ne saurez toujours pas exactement combien.
-          Vous relancerez au hasard, en espérant que ça rentre.
+          Demain matin, vos clients vous devront toujours le même montant.
+          Personne ne les relancera avec la bonne méthode, au bon moment, sur le bon ton.
+          Chaque semaine sans pilotage, c'est du cash qui reste bloqué gratuitement.
         </p>
-        <p className="text-lg md:text-xl font-semibold text-primary leading-snug mb-2">
-          Chaque mois sans diagnostic, c'est du cash qui reste{" "}
-          <span className="text-highlight italic">bloqué gratuitement.</span>
-        </p>
-        <p className="text-sm font-semibold text-foreground mb-8">
-          10 jours. <span className="text-highlight">Garanti Oraya.</span>
+        <p className="text-lg md:text-xl font-semibold text-primary leading-snug mb-8">
+          On peut commencer en{" "}
+          <span className="text-highlight italic">10 jours.</span>
         </p>
         <a
           href={TALLY_URL}
@@ -23,7 +20,7 @@ const FinalCTA = () => (
           rel="noopener noreferrer"
           className="inline-block bg-cta text-cta-foreground px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97]"
         >
-          Vérifier mon éligibilité — 2 minutes
+          Demander une démo — 20 minutes
         </a>
       </ScrollReveal>
     </div>

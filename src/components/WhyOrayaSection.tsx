@@ -1,10 +1,10 @@
 import ScrollReveal from "./ScrollReveal";
 
 const rows = [
-  { problem: "Votre logiciel affiche un chiffre.", solution: "Oraya vous dit d'où il vient et comment le changer." },
-  { problem: "Un DAF coûte 30 000€ et prend 6 mois.", solution: "Oraya livre en 10 jours pour 2 500€." },
-  { problem: "L'affacturage vous fait payer pour votre propre argent.", solution: "Oraya réduit le problème à la source." },
-  { problem: "Votre comptable enregistre les retards.", solution: "Oraya identifie pourquoi ils existent." },
+  { problem: "Votre logiciel comptable affiche le retard.", solution: "Oraya identifie d'où il vient, relance le client, et suit la réponse." },
+  { problem: "Votre comptable enregistre la facture impayée.", solution: "Oraya vous dit pourquoi elle n'est pas payée et agit pour la débloquer." },
+  { problem: "L'affacturage vous fait payer une commission sur votre propre argent.", solution: "Oraya réduit le retard à la source. Vous gardez votre marge." },
+  { problem: "Vous relancez vous-même, quand vous y pensez, entre deux urgences.", solution: "Oraya relance à votre place, depuis votre nom, avec le bon ton au bon moment." },
 ];
 
 const WhyOrayaSection = () => (
@@ -12,7 +12,7 @@ const WhyOrayaSection = () => (
     <div className="section-container">
       <ScrollReveal>
         <h2 className="text-2xl md:text-3xl font-extrabold text-center mb-10">
-          Pourquoi <span className="text-highlight italic">Oraya</span> ?
+          Ce que personne ne fait à votre place. <span className="text-highlight italic">Jusqu'ici.</span>
         </h2>
       </ScrollReveal>
 
@@ -39,7 +39,7 @@ const WhyOrayaSection = () => (
 
       <ScrollReveal delay={200}>
         <p className="text-center text-lg font-bold mt-10">
-          Un seul problème. Un plan exact. <span className="text-highlight italic">Garanti.</span>
+          Ils observent. <span className="text-highlight italic">Oraya agit.</span>
         </p>
       </ScrollReveal>
     </div>

@@ -5,32 +5,32 @@ import { WHATSAPP_URL, EMAIL } from "@/config/constants";
 
 const faqs = [
   {
-    q: "Qu'est-ce qu'Oraya exactement ?",
-    a: "Oraya est un diagnostic complet de vos retards de paiement. On analyse chaque facture, on identifie les clients qui vous coûtent le plus, et on vous livre un plan d'action chiffré et priorisé pour récupérer votre trésorerie.",
+    q: "Concrètement, qu'est-ce qu'Oraya fait ?",
+    a: "On analyse vos factures, on identifie votre cash bloqué client par client, on envoie les relances depuis votre propre nom, on lit les réponses, on adapte les séquences, et on vous envoie un récap chaque lundi. Vous n'avez rien à configurer, rien à surveiller.",
   },
   {
     q: "Mon comptable ne gère pas déjà ça ?",
-    a: "Votre comptable enregistre les factures. Oraya les analyse sous un angle financier que personne ne regarde : combien chaque retard vous coûte, quels clients bloquent votre cash, et quelles actions prendre en priorité.",
+    a: "Votre comptable enregistre que la facture n'est pas payée. Il ne vous dit pas pourquoi, combien ça vous coûte par mois, ni quoi faire cette semaine. Ce n'est pas son rôle — c'est le nôtre.",
   },
   {
-    q: "Comment un diagnostic va m'aider à encaisser plus vite ?",
-    a: "Vous ne recevez pas un rapport à interpréter. Vous recevez une cartographie complète de votre cash bloqué, les causes exactes pour chaque blocage, et un plan d'action priorisé par impact financier. Chaque action est chiffrée.",
-  },
-  {
-    q: "Je peux faire ça moi-même, non ?",
-    a: "En théorie, oui. En pratique, ça demande des heures d'analyse, une méthode éprouvée et une objectivité difficile à avoir quand ce sont vos propres clients. Oraya vous fait gagner du temps et de la lucidité.",
-  },
-  {
-    q: "Et si je ne suis pas satisfait ?",
-    a: "Notre garantie est simple : nous identifions au minimum 2 fois le coût du diagnostic en cash récupérable. Si ce n'est pas le cas, on recommence gratuitement. Sans condition.",
-  },
-  {
-    q: "Mes données sont-elles sécurisées ?",
-    a: "Absolument. Vos données sont traitées de manière confidentielle, stockées sur des serveurs sécurisés en Europe, et supprimées après la mission. Nous pouvons signer un accord de confidentialité sur demande.",
+    q: "J'ai déjà un logiciel de trésorerie.",
+    a: "Votre logiciel vous montre combien vous avez encaissé et décaissé. C'est un thermomètre. Oraya vous dit pourquoi la température est élevée et la fait baisser. Client par client.",
   },
   {
     q: "Je ne veux pas brusquer mes clients.",
-    a: "C'est justement l'approche Oraya : pas de relance agressive. On vous donne les mots justes, le bon timing, et la bonne méthode pour chaque client. Vous protégez votre relation commerciale tout en encaissant plus vite.",
+    a: "Ne pas relancer, c'est envoyer un message : \"Prends ton temps.\" Un cadre clair n'abîme pas la relation — c'est le flou qui l'abîme. Vos clients stratégiques sont protégés : rien ne part sans votre validation.",
+  },
+  {
+    q: "Je peux faire ça moi-même.",
+    a: "Vous pouvez identifier qui vous paie en retard — oui. Mais avez-vous analysé les 12 derniers mois facture par facture ? Savez-vous si le retard vient de votre process de facturation, de vos CGV, ou du client ? 60 % du temps, le problème vient de l'interne. Ça, vous ne pouvez pas le voir seul.",
+  },
+  {
+    q: "Mes données sont-elles protégées ?",
+    a: "Vous signez un accord de traitement des données à l'activation. Les relances partent depuis votre propre domaine. Votre client voit votre entreprise, pas Oraya.",
+  },
+  {
+    q: "C'est normal dans mon secteur.",
+    a: "C'est normalisé. Ce n'est pas normal. Si tout le monde accepte 35 jours de retard et que vous descendez à 20, vous avez du cash en plus par rapport à vos concurrents. Même secteur, mêmes clients — juste un meilleur cadre.",
   },
 ];
 
@@ -56,7 +56,7 @@ const FAQSection = () => {
                   <p className="font-semibold text-lg mb-1">Besoin d'un renseignement ?</p>
                   <p className="font-semibold text-lg mb-3">Discutez avec Raphaël sur Whatsapp.</p>
                   <p className="text-sm opacity-70 mb-6">
-                    Découvrez comment nous pouvons vous aider à récupérer votre trésorerie bloquée.
+                    On peut regarder ensemble si votre situation est éligible.
                   </p>
                   <a
                     href={WHATSAPP_URL}

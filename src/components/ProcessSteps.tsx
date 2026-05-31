@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ClipboardList, Phone, BarChart3, Presentation, CheckCircle } from "lucide-react";
+import { Video, Upload, BarChart3, Rocket, RefreshCw } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import etape1 from "@/assets/etape_1.png";
 import etape2 from "@/assets/etape_2.png";
@@ -10,48 +10,50 @@ import etape5 from "@/assets/etape_5.png";
 
 const steps = [
   {
-    icon: ClipboardList,
+    icon: Video,
     day: "Jour 0",
-    title: "Éligibilité",
-    text: (<>Vous répondez à quelques questions en <span className="font-semibold text-foreground">2 minutes</span>.</>),
+    title: "Démo",
+    text: "20 minutes pour comprendre votre situation. On regarde ensemble si Oraya peut vous aider.",
     image: etape1,
-    alt: "Formulaire d'éligibilité Oraya — Étape 1",
+    alt: "Démo Oraya — Étape 1",
   },
   {
-    icon: Phone,
+    icon: Upload,
     day: "Jour 1",
-    title: "Cadrage",
-    text: "Un appel de 20 minutes. Vous exportez vos factures.",
+    title: "Vos exports",
+    text: "Vous envoyez vos exports comptables : balance âgée, grand livre, factures. On s'occupe du reste.",
     image: etape2,
     images: [
-      { src: etape2, alt: "Appel de cadrage Oraya — Étape 2" },
-      { src: etape2_1, alt: "Export des factures — Étape 2" },
+      { src: etape2, alt: "Exports comptables — Étape 2" },
+      { src: etape2_1, alt: "Balance âgée — Étape 2" },
     ],
-    alt: "Appel de cadrage Oraya — Étape 2",
+    alt: "Exports comptables Oraya — Étape 2",
   },
   {
     icon: BarChart3,
-    day: "Jours 2-9",
-    title: "Analyse",
-    text: (<>On analyse <span className="font-semibold text-foreground">chaque facture</span>. Vous n'avez rien à faire.</>),
+    day: "Jours 2-10",
+    title: "Analyse et mise en place",
+    text: (<>On analyse chaque facture, on classe vos clients par risque, on prépare les premières séquences de relance.{" "}
+      <span className="font-semibold text-foreground">Vous n'avez rien à faire.</span></>),
     image: etape3,
-    alt: "Analyse des factures Oraya — Étape 3",
+    alt: "Analyse Oraya — Étape 3",
   },
   {
-    icon: Presentation,
+    icon: Rocket,
     day: "Jour 10",
-    title: "Restitution",
-    text: (<>Votre <span className="font-semibold text-highlight">diagnostic complet</span> + appel de 30 minutes.</>),
+    title: "Lancement",
+    text: (<>Premiers envois. Vous recevez votre{" "}
+      <span className="font-semibold text-highlight">premier récap le lundi suivant</span>.</>),
     image: etape4,
-    alt: "Restitution du diagnostic Oraya — Étape 4",
+    alt: "Lancement Oraya — Étape 4",
   },
   {
-    icon: CheckCircle,
-    day: "J+30",
-    title: "Suivi",
-    text: "Point de contrôle pour mesurer les résultats.",
+    icon: RefreshCw,
+    day: "Chaque semaine",
+    title: "Pilotage continu",
+    text: "Les relances tournent. Les réponses sont lues et traitées. Vous intervenez uniquement quand une décision vous revient.",
     image: etape5,
-    alt: "Suivi des résultats Oraya — Étape 5",
+    alt: "Pilotage continu Oraya — Étape 5",
   },
 ];
 
@@ -73,11 +75,11 @@ const ProcessSteps = () => {
         <ScrollReveal>
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">
-              Comment ça se passe <span className="text-highlight italic">concrètement.</span>
+              Comment ça démarre. <span className="text-highlight italic">Concrètement.</span>
             </h2>
             <p className="text-muted-foreground">
-              Un appel pour cadrer. Un formulaire structuré. Votre diagnostic livré en{" "}
-              <span className="font-semibold text-foreground">10 jours</span>.
+              Un appel. Vos exports.{" "}
+              <span className="font-semibold text-foreground">On prend la main.</span>
             </p>
           </div>
         </ScrollReveal>

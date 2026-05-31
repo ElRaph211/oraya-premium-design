@@ -3,25 +3,62 @@ import aboutPhoto from "@/assets/image_for_a_propos.png";
 
 const AboutSection = () => (
   <section className="section-padding bg-secondary/50">
-    <div className="section-container max-w-3xl">
+    <div className="section-container max-w-4xl">
       <ScrollReveal>
-        <div className="flex flex-col md:flex-row items-center gap-8">
-          <img
-            src={aboutPhoto}
-            alt="Raphaël, fondateur d'Oraya"
-            className="w-44 h-44 rounded-full object-cover flex-shrink-0 border-2 border-border shadow-sm"
-          />
-          <div>
-            <h2 className="text-2xl font-bold mb-4">À propos</h2>
+        <h2 className="text-2xl font-bold mb-10 text-center">À propos</h2>
+      </ScrollReveal>
+
+      <div className="grid md:grid-cols-2 gap-8">
+        {/* Raphaël */}
+        <ScrollReveal delay={0}>
+          <div className="bg-background rounded-2xl border border-border p-7 flex flex-col gap-5 h-full">
+            <div className="flex items-center gap-4">
+              <img
+                src={aboutPhoto}
+                alt="Raphaël Aubry, fondateur d'Oraya"
+                className="w-16 h-16 rounded-full object-cover flex-shrink-0 border-2 border-border shadow-sm"
+              />
+              <div>
+                <p className="font-bold text-base">Raphaël Aubry</p>
+                <p className="text-xs text-muted-foreground">Fondateur, Oraya</p>
+              </div>
+            </div>
             <p className="text-sm text-foreground/80 leading-relaxed">
-              Je suis Raphaël, fondateur d'Oraya. En accompagnant des dirigeants de PME, j'ai vu la même anomalie partout :
-              des <span className="font-semibold text-highlight">milliers d'euros gagnés qui ne rentrent jamais</span>, sans que personne ne sache dire pourquoi ni quoi faire.
-              Je ne suis pas un consultant généraliste et Oraya n'est pas un outil de plus. C'est une <span className="font-semibold text-foreground italic">méthode chirurgicale</span>{" "}
-              dédiée à un seul problème, avec un <span className="font-semibold text-highlight">résultat concret et garanti</span> en 10 jours.
+              Je travaille en alternance dans une entreprise qui est elle-même un mauvais payeur.
+              Je vois le problème des deux côtés tous les jours — celui qui attend son argent et celui qui fait attendre.
+            </p>
+            <p className="text-sm text-foreground/80 leading-relaxed">
+              J'ai construit Oraya parce que j'ai vu la même chose partout : des dirigeants qui savent qu'ils ont un problème de cash,
+              qui n'ont ni le temps ni le recul pour le résoudre, et à qui personne ne propose autre chose qu'un tableau de bord ou une facture de consultant.
+            </p>
+            <p className="text-sm font-semibold text-foreground">
+              Oraya fait le travail à votre place. C'est aussi simple que ça.
             </p>
           </div>
-        </div>
-      </ScrollReveal>
+        </ScrollReveal>
+
+        {/* François-Clément */}
+        <ScrollReveal delay={120}>
+          <div className="bg-background rounded-2xl border border-border p-7 flex flex-col gap-5 h-full">
+            <div className="flex items-center gap-4">
+              <div className="w-16 h-16 rounded-full bg-highlight/10 flex items-center justify-center flex-shrink-0 border-2 border-border">
+                <span className="text-highlight font-bold text-lg">FC</span>
+              </div>
+              <div>
+                <p className="font-bold text-base">François-Clément Lacolonge</p>
+                <p className="text-xs text-muted-foreground">CTO, Oraya</p>
+              </div>
+            </div>
+            <p className="text-sm text-foreground/80 leading-relaxed">
+              Sur le point de finir EPITA, j'ai rejoint Raphaël pour concevoir et construire l'infrastructure
+              qui fait tourner Oraya — de l'automatisation des relances à la livraison du récap hebdomadaire.
+            </p>
+            <p className="text-sm text-foreground/80 leading-relaxed">
+              Mon rôle : que le service soit fiable, silencieux, et que vous n'ayez jamais à vous demander si ça tourne.
+            </p>
+          </div>
+        </ScrollReveal>
+      </div>
     </div>
   </section>
 );

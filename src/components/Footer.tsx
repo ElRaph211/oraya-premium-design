@@ -13,7 +13,11 @@ const Footer = () => {
       return;
     }
 
-    const anchor = target.replace("/#", "");
+    if (target === "/mentions-legales" || target === "/cgv") {
+      navigate(target);
+      setTimeout(() => window.scrollTo({ top: 0 }), 100);
+      return;
+    }
 
     if (target === "/") {
       if (location.pathname === "/") {
@@ -25,6 +29,8 @@ const Footer = () => {
       return;
     }
 
+    // Anchor links (e.g. /#systeme)
+    const anchor = target.replace("/#", "");
     if (location.pathname === "/") {
       const el = document.getElementById(anchor);
       if (el) {
@@ -45,8 +51,9 @@ const Footer = () => {
 
   const footerLinks = [
     { label: "Accueil", to: "/" },
-    { label: "Système", to: "/systeme" },
-    { label: "Offre", to: "/offre" },
+    { label: "Comment ça marche", to: "/#systeme" },
+    { label: "Calculateur", to: "/#calculateur" },
+    { label: "FAQ", to: "/#faq" },
     { label: "Contact", to: "/contact" },
     { label: "Mentions légales", to: "/mentions-legales" },
     { label: "CGV", to: "/cgv" },
@@ -61,7 +68,7 @@ const Footer = () => {
               <img src={bottomImage} alt="Oraya" className="h-36 w-auto" />
             </button>
             <p className="text-sm opacity-70 max-w-xs">
-              Diagnostic retards de paiement pour PME B2B
+              Pilotage du poste client pour PME B2B
             </p>
             <p className="text-xs opacity-50">
               128 Rue La Boétie, 75008 Paris
@@ -84,18 +91,11 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className="flex flex-wrap gap-6 text-sm">
+          <div className="flex flex-wrap gap-x-6 gap-y-3 text-sm max-w-xs md:max-w-none">
             {footerLinks.map((link) => (
               <button
                 key={link.to}
-                onClick={() => {
-                  if (["/mentions-legales", "/cgv", "/systeme", "/offre"].includes(link.to)) {
-                    navigate(link.to);
-                    setTimeout(() => window.scrollTo({ top: 0 }), 100);
-                  } else {
-                    handleNavClick(link.to);
-                  }
-                }}
+                onClick={() => handleNavClick(link.to)}
                 className="opacity-70 hover:opacity-100 transition-opacity"
               >
                 {link.label}

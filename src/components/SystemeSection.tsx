@@ -1,14 +1,38 @@
-import { Shield, Search, Target, Lightbulb, BarChart3, FileCheck } from "lucide-react";
+import { Search, Send, MessageSquare, Shield, AlertTriangle, CalendarCheck } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import { TALLY_URL } from "@/config/constants";
 
 const blocks = [
-  { icon: Search, title: "Cartographie complète", text: "Chaque facture est analysée individuellement : montant, client, délai réel, écart par rapport aux conditions. Rien n'est estimé." },
-  { icon: BarChart3, title: "Scoring client", text: "Chaque client reçoit un score de risque basé sur son historique de paiement. Vous savez immédiatement qui surveiller." },
-  { icon: Target, title: "Priorisation par impact", text: "Les actions sont classées par impact financier décroissant. Vous commencez par ce qui rapporte le plus." },
-  { icon: FileCheck, title: "Scripts de relance", text: "Pour chaque situation, un script prêt à envoyer : email, appel, courrier. Adapté au profil du client." },
-  { icon: Shield, title: "Cadre préventif", text: "Conditions générales, process de facturation, calendrier de relance : le cadre pour que les retards ne se reproduisent plus." },
-  { icon: Lightbulb, title: "Recommandations stratégiques", text: "Au-delà de la relance : renégociation des conditions, segmentation client, arbitrage commercial." },
+  {
+    icon: Search,
+    title: "Analyse initiale",
+    text: "On reçoit vos exports comptables. Chaque facture est analysée : montant, délai réel, écart avec vos conditions, historique du client. On identifie où votre cash est bloqué et pourquoi.",
+  },
+  {
+    icon: Send,
+    title: "Relances sous votre nom",
+    text: "Les relances partent depuis une adresse sur votre propre domaine. Votre client voit votre entreprise, pas un tiers. Le ton et le timing sont adaptés au profil de chaque débiteur.",
+  },
+  {
+    icon: MessageSquare,
+    title: "Lecture des réponses",
+    text: "Quand un client répond — promesse de paiement, contestation, demande de délai — on lit, on classe, on adapte la suite. Si un client promet de payer vendredi, la relance suivante est suspendue.",
+  },
+  {
+    icon: Shield,
+    title: "Arbitrage protégé",
+    text: "Vos clients stratégiques sont identifiés dès le départ. Rien ne part vers eux sans votre validation. Vous gardez le contrôle sur les relations qui comptent.",
+  },
+  {
+    icon: AlertTriangle,
+    title: "Escalade si nécessaire",
+    text: "Si un client ne réagit pas malgré les relances : mise en demeure préparée et soumise à votre validation. Si ça va plus loin, on prépare le dossier et on vous oriente.",
+  },
+  {
+    icon: CalendarCheck,
+    title: "Récap hebdomadaire",
+    text: "Chaque lundi matin : ce qui a été envoyé, ce qui a été répondu, ce qui a bougé, ce qui nécessite votre décision. Vous pilotez en 5 minutes par semaine.",
+  },
 ];
 
 const SystemeSection = () => (
@@ -16,13 +40,14 @@ const SystemeSection = () => (
     <div className="section-container">
       <ScrollReveal>
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <p className="text-xs font-bold uppercase tracking-widest text-highlight mb-3">Le système <span className="font-extrabold">Oraya</span></p>
+          <p className="text-xs font-bold uppercase tracking-widest text-highlight mb-3">Le Pilotage Silencieux</p>
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Un diagnostic structuré orienté{" "}
-            <span className="text-highlight italic">résultats</span>
+            Comment ça fonctionne.{" "}
+            <span className="text-highlight italic">Concrètement.</span>
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            Pas un logiciel. Pas un consultant généraliste. Un diagnostic structuré, livré en <span className="font-semibold text-foreground">10 jours</span>, avec des décisions actionnables dès le lendemain.
+            Vos clients reçoivent une relance depuis votre entreprise. Vous recevez un point le lundi.
+            Entre les deux, <span className="font-semibold text-foreground">tout est géré.</span>
           </p>
         </div>
       </ScrollReveal>
@@ -68,7 +93,7 @@ const SystemeSection = () => (
             rel="noopener noreferrer"
             className="inline-block bg-cta text-cta-foreground px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97]"
           >
-            Vérifier mon éligibilité — 2 minutes
+            Demander une démo — 20 minutes
           </a>
         </div>
       </ScrollReveal>

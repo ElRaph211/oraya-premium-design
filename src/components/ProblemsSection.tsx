@@ -5,20 +5,23 @@ const cards = [
   {
     icon: TrendingDown,
     badge: "Trésorerie sous tension",
-    title: <>Vous <span className="text-highlight italic">financez vos clients</span> sans le vouloir</>,
-    text: <>Vous travaillez, vous facturez, mais <span className="font-semibold text-foreground">le cash ne suit pas</span>. Vos clients vous paient en retard pendant qu'on vous réclame charges, salaires et fournisseurs sans délai.</>,
+    title: <>Vous travaillez. Vous facturez. <span className="text-highlight italic">Le cash ne suit pas.</span></>,
+    text: <>Vos clients encaissent votre travail, mais vous attendez leur argent. Pendant ce temps, les charges, les salaires et les fournisseurs,{" "}
+      <span className="font-semibold text-foreground">eux, n'attendent pas.</span></>,
   },
   {
     icon: EyeOff,
-    badge: "Manque de visibilité",
-    title: <>Vous ne savez pas <span className="text-highlight italic">ce qui bloque vraiment</span></>,
-    text: <>Vous savez que certains clients paient en retard. Mais <span className="font-semibold text-foreground">lesquels vous coûtent le plus ?</span> Sans analyse précise, impossible de savoir où agir en priorité.</>,
+    badge: "Pilotage à l'aveugle",
+    title: <>Vous savez que ça traîne. <span className="text-highlight italic">Vous ne savez pas combien.</span></>,
+    text: <>Quel client vous coûte le plus en cash bloqué ? Lequel glisse depuis trois mois sans que personne ne réagisse ?{" "}
+      <span className="font-semibold text-foreground">Sans analyse facture par facture, vous pilotez à l'aveugle.</span></>,
   },
   {
     icon: Hourglass,
-    badge: "Inaction subie",
-    title: <>Vous ne savez pas <span className="text-highlight italic">par où commencer</span></>,
-    text: <>Relancer tout le monde de la même manière ne fonctionne pas. Ce qui manque : savoir <span className="font-semibold text-foreground">quel client bloque combien</span> et quoi faire concrètement cette semaine.</>,
+    badge: "Relances sans méthode",
+    title: <>Vous relancez quand vous y pensez. <span className="text-highlight italic">Trop tard. Sans méthode.</span></>,
+    text: <>Tout le monde reçoit le même email, au même moment, sur le même ton. Les bons payeurs sont agacés. Les mauvais payeurs ignorent.{" "}
+      <span className="font-semibold text-foreground">Et vous perdez du temps sur les deux.</span></>,
   },
 ];
 
@@ -28,11 +31,12 @@ const ProblemsSection = () => (
       <ScrollReveal>
         <div className="text-center max-w-2xl mx-auto mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
-            9 dirigeants sur 10 avancent l'argent de leurs clients{" "}
-            <span className="text-highlight italic">sans le mesurer.</span>
+            <span className="text-highlight">15 milliards d'euros.</span>
           </h2>
-          <p className="text-muted-foreground">
-            <span className="font-semibold text-foreground">15 milliards d'euros</span> bloqués chaque année dans les retards de paiement des PME françaises.
+          <p className="text-muted-foreground text-base leading-relaxed">
+            C'est ce que les PME françaises laissent dormir chaque année dans les retards de paiement.{" "}
+            <span className="font-semibold text-foreground">Une entreprise sur quatre qui ferme, ferme à cause de sa trésorerie</span>{" "}
+            — pas à cause de son carnet de commandes.
           </p>
         </div>
       </ScrollReveal>
