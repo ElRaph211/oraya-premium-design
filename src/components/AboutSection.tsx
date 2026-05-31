@@ -41,9 +41,11 @@ const AboutSection = () => (
         <ScrollReveal delay={120}>
           <div className="bg-background rounded-2xl border border-border p-7 flex flex-col gap-5 h-full">
             <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-full bg-highlight/10 flex items-center justify-center flex-shrink-0 border-2 border-border">
-                <span className="text-highlight font-bold text-lg">FC</span>
-              </div>
+              <img
+                src="/pp_fc.png"
+                alt="François-Clément Lacolonge, CTO d'Oraya"
+                className="w-16 h-16 rounded-full object-cover flex-shrink-0 border-2 border-border shadow-sm"
+              />
               <div>
                 <p className="font-bold text-base">François-Clément Lacolonge</p>
                 <p className="text-xs text-muted-foreground">CTO, Oraya</p>
