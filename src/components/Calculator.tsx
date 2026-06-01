@@ -132,8 +132,8 @@ const Calculator = () => {
               Cash bloqué estimé : <span className="text-highlight text-lg font-extrabold">{fmt(cashBlocked)}</span>
             </p>
             <p className="text-sm text-muted-foreground mb-4 max-w-lg mx-auto leading-relaxed">
-              Ce chiffre existe déjà dans vos comptes. Il n'est juste pas encore sur votre compte bancaire.
-              On peut vous montrer exactement où il se trouve et comment le faire rentrer.
+              Ce montant existe déjà. Il est bloqué chez vos clients.{" "}
+              <span className="font-semibold text-foreground">Oraya se connecte à votre outil, identifie où il se trouve, et le fait rentrer.</span>
             </p>
             <a
               href={TALLY_URL}
@@ -141,7 +141,7 @@ const Calculator = () => {
               rel="noopener noreferrer"
               className="inline-block bg-cta text-cta-foreground px-7 py-3 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97]"
             >
-              Demander une démo — 20 minutes
+              Demander une démo
             </a>
           </div>
 

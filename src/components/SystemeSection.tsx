@@ -1,37 +1,37 @@
-import { Search, Send, MessageSquare, Shield, AlertTriangle, CalendarCheck } from "lucide-react";
+import { Plug, Radar, Send, MessageSquare, Shield, Bell } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import { TALLY_URL } from "@/config/constants";
 
 const blocks = [
   {
-    icon: Search,
-    title: "Analyse initiale",
-    text: "On reçoit vos exports comptables. Chaque facture est analysée : montant, délai réel, écart avec vos conditions, historique du client. On identifie où votre cash est bloqué et pourquoi.",
+    icon: Plug,
+    title: "Connexion API",
+    text: "Oraya se connecte à votre outil comptable ou importe vos fichiers. Factures, clients, conditions de paiement — synchronisés en quelques clics.",
+  },
+  {
+    icon: Radar,
+    title: "Détection continue",
+    text: "Chaque facture est suivie en temps réel. Les retards sont détectés dès qu'ils apparaissent.",
   },
   {
     icon: Send,
-    title: "Relances sous votre nom",
-    text: "Les relances partent depuis une adresse sur votre propre domaine. Votre client voit votre entreprise, pas un tiers. Le ton et le timing sont adaptés au profil de chaque débiteur.",
+    title: "Relances depuis votre domaine",
+    text: "Les messages partent depuis une adresse sur votre propre domaine. Votre client voit votre entreprise. Le ton et le timing s'adaptent au comportement de chaque débiteur.",
   },
   {
     icon: MessageSquare,
     title: "Lecture des réponses",
-    text: "Quand un client répond — promesse de paiement, contestation, demande de délai — on lit, on classe, on adapte la suite. Si un client promet de payer vendredi, la relance suivante est suspendue.",
+    text: "Quand un client répond — promesse, contestation, demande de délai — sa réponse est analysée et la séquence s'adapte. Une promesse suspend la relance. Une contestation déclenche un traitement spécifique.",
   },
   {
     icon: Shield,
     title: "Arbitrage protégé",
-    text: "Vos clients stratégiques sont identifiés dès le départ. Rien ne part vers eux sans votre validation. Vous gardez le contrôle sur les relations qui comptent.",
+    text: "Vos clients stratégiques sont identifiés dès le départ. Rien ne part sans votre validation. Vos règles, votre ton, votre rythme.",
   },
   {
-    icon: AlertTriangle,
-    title: "Escalade si nécessaire",
-    text: "Si un client ne réagit pas malgré les relances : mise en demeure préparée et soumise à votre validation. Si ça va plus loin, on prépare le dossier et on vous oriente.",
-  },
-  {
-    icon: CalendarCheck,
-    title: "Récap hebdomadaire",
-    text: "Chaque lundi matin : ce qui a été envoyé, ce qui a été répondu, ce qui a bougé, ce qui nécessite votre décision. Vous pilotez en 5 minutes par semaine.",
+    icon: Bell,
+    title: "Escalade et récap",
+    text: "Si un client ne réagit pas : mise en demeure préparée et soumise à votre validation. Chaque lundi, un point clair sur ce qui a avancé et ce qui nécessite votre décision.",
   },
 ];
 
@@ -42,12 +42,12 @@ const SystemeSection = () => (
         <div className="text-center max-w-3xl mx-auto mb-12">
           <p className="text-xs font-bold uppercase tracking-widest text-highlight mb-3">Le Pilotage Silencieux</p>
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
-            Comment ça fonctionne.{" "}
-            <span className="text-highlight italic">Concrètement.</span>
+            De la connexion à{" "}
+            <span className="text-highlight italic">l'encaissement.</span>
           </h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
-            Vos clients reçoivent une relance depuis votre entreprise. Vous recevez un point le lundi.
-            Entre les deux, <span className="font-semibold text-foreground">tout est géré.</span>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            Vos clients reçoivent une relance depuis votre entreprise. Vous recevez un récap le lundi.
+            Entre les deux, <span className="font-semibold text-foreground">tout est détecté, envoyé, lu et adapté.</span>
           </p>
         </div>
       </ScrollReveal>
@@ -93,7 +93,7 @@ const SystemeSection = () => (
             rel="noopener noreferrer"
             className="inline-block bg-cta text-cta-foreground px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97]"
           >
-            Demander une démo — 20 minutes
+            Demander une démo
           </a>
         </div>
       </ScrollReveal>

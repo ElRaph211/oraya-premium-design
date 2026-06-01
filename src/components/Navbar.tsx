@@ -6,8 +6,8 @@ import { WHATSAPP_URL, TALLY_URL } from "@/config/constants";
 
 const navLinks = [
   { label: "Accueil", to: "/" },
-  { label: "Système", to: "/systeme" },
-  { label: "Offre", to: "/offre" },
+  { label: "Comment ça marche", to: "/systeme" },
+  { label: "Notre offre", to: "/offre" },
   { label: "FAQ", to: "/#faq" },
   { label: "Contact", to: "/contact" },
 ];
@@ -90,7 +90,7 @@ const Navbar = () => {
             rel="noopener noreferrer"
             className="bg-cta text-cta-foreground px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-xl hover:shadow-cta/50 hover:-translate-y-0.5 hover:scale-[1.03] active:scale-[0.97]"
           >
-            Démarrer
+            Demander une démo
           </a>
           <a
             href={WHATSAPP_URL}
@@ -150,7 +150,7 @@ const Navbar = () => {
               rel="noopener noreferrer"
               className="flex-1 bg-cta text-cta-foreground px-5 py-2.5 rounded-lg text-sm font-semibold text-center transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-xl hover:shadow-cta/50 active:scale-[0.97]"
             >
-              Démarrer
+              Demander une démo
             </a>
             <a
               href={WHATSAPP_URL}

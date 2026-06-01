@@ -7,12 +7,12 @@ const FinalCTA = () => (
       <ScrollReveal>
         <p className="text-base md:text-lg text-foreground/80 leading-relaxed mb-6">
           Demain matin, vos clients vous devront toujours le même montant.
-          Personne ne les relancera avec la bonne méthode, au bon moment, sur le bon ton.
-          Chaque semaine sans pilotage, c'est du cash qui reste bloqué gratuitement.
+          Personne ne les relancera avec le bon message, au bon moment, sur le bon ton.
+          Chaque semaine sans pilotage, c'est du cash qui reste bloqué.
         </p>
         <p className="text-lg md:text-xl font-semibold text-primary leading-snug mb-8">
-          On peut commencer en{" "}
-          <span className="text-highlight italic">10 jours.</span>
+          Oraya peut être opérationnel en{" "}
+          <span className="text-highlight italic">7 jours.</span>
         </p>
         <a
           href={TALLY_URL}
@@ -20,7 +20,7 @@ const FinalCTA = () => (
           rel="noopener noreferrer"
           className="inline-block bg-cta text-cta-foreground px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97]"
         >
-          Demander une démo — 20 minutes
+          Demander une démo
         </a>
       </ScrollReveal>
     </div>

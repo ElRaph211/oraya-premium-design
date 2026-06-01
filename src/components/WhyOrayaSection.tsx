@@ -4,7 +4,7 @@ const rows = [
   { problem: "Votre logiciel comptable affiche le retard.", solution: "Oraya identifie d'où il vient, relance le client, et suit la réponse." },
   { problem: "Votre comptable enregistre la facture impayée.", solution: "Oraya vous dit pourquoi elle n'est pas payée et agit pour la débloquer." },
   { problem: "L'affacturage vous fait payer une commission sur votre propre argent.", solution: "Oraya réduit le retard à la source. Vous gardez votre marge." },
-  { problem: "Vous relancez vous-même, quand vous y pensez, entre deux urgences.", solution: "Oraya relance à votre place, depuis votre nom, avec le bon ton au bon moment." },
+  { problem: "Les outils de relance vous demandent de configurer, surveiller, décider.", solution: "Oraya se connecte via API, apprend vos règles, et tourne." },
 ];
 
 const WhyOrayaSection = () => (
@@ -39,7 +39,7 @@ const WhyOrayaSection = () => (
 
       <ScrollReveal delay={200}>
         <p className="text-center text-lg font-bold mt-10">
-          Ils observent. <span className="text-highlight italic">Oraya agit.</span>
+          Ils vous montrent le problème. <span className="text-highlight italic">Oraya le fait avancer.</span>
         </p>
       </ScrollReveal>
     </div>

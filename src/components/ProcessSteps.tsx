@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Video, Upload, BarChart3, Rocket, RefreshCw } from "lucide-react";
+import { Video, Plug, Settings, Rocket, RefreshCw } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import etape1 from "@/assets/etape_1.png";
 import etape2 from "@/assets/etape_2.png";
@@ -11,47 +11,47 @@ import etape5 from "@/assets/etape_5.png";
 const steps = [
   {
     icon: Video,
-    day: "Jour 0",
+    day: "Étape 1",
     title: "Démo",
-    text: "20 minutes pour comprendre votre situation. On regarde ensemble si Oraya peut vous aider.",
+    text: "On regarde votre situation et on vérifie qu'Oraya peut vous aider.",
     image: etape1,
     alt: "Démo Oraya — Étape 1",
   },
   {
-    icon: Upload,
-    day: "Jour 1",
-    title: "Vos exports",
-    text: "Vous envoyez vos exports comptables : balance âgée, grand livre, factures. On s'occupe du reste.",
+    icon: Plug,
+    day: "Étape 2",
+    title: "Connexion",
+    text: (<>Votre outil comptable est connecté <span className="font-semibold text-foreground">via API ou import de fichiers</span>. Vos données sont synchronisées.</>),
     image: etape2,
     images: [
-      { src: etape2, alt: "Exports comptables — Étape 2" },
-      { src: etape2_1, alt: "Balance âgée — Étape 2" },
+      { src: etape2, alt: "Connexion API — Étape 2" },
+      { src: etape2_1, alt: "Import de fichiers — Étape 2" },
     ],
-    alt: "Exports comptables Oraya — Étape 2",
+    alt: "Connexion Oraya — Étape 2",
   },
   {
-    icon: BarChart3,
-    day: "Jours 2-10",
-    title: "Analyse et mise en place",
-    text: (<>On analyse chaque facture, on classe vos clients par risque, on prépare les premières séquences de relance.{" "}
-      <span className="font-semibold text-foreground">Vous n'avez rien à faire.</span></>),
+    icon: Settings,
+    day: "Étape 3",
+    title: "Configuration",
+    text: (<>Vos factures sont analysées, vos clients classés, vos séquences préparées.{" "}
+      <span className="font-semibold text-foreground">Vous validez les règles sur vos comptes sensibles.</span></>),
     image: etape3,
-    alt: "Analyse Oraya — Étape 3",
+    alt: "Configuration Oraya — Étape 3",
   },
   {
     icon: Rocket,
-    day: "Jour 10",
+    day: "Étape 4",
     title: "Lancement",
-    text: (<>Premiers envois. Vous recevez votre{" "}
-      <span className="font-semibold text-highlight">premier récap le lundi suivant</span>.</>),
+    text: (<>Les premières relances partent.{" "}
+      <span className="font-semibold text-highlight">Depuis votre nom, sur votre domaine.</span></>),
     image: etape4,
     alt: "Lancement Oraya — Étape 4",
   },
   {
     icon: RefreshCw,
-    day: "Chaque semaine",
+    day: "Étape 5",
     title: "Pilotage continu",
-    text: "Les relances tournent. Les réponses sont lues et traitées. Vous intervenez uniquement quand une décision vous revient.",
+    text: "Le service tourne. Les réponses sont traitées. Vous recevez un récap le lundi.",
     image: etape5,
     alt: "Pilotage continu Oraya — Étape 5",
   },
@@ -75,11 +75,11 @@ const ProcessSteps = () => {
         <ScrollReveal>
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-3">
-              Comment ça démarre. <span className="text-highlight italic">Concrètement.</span>
+              Opérationnel en <span className="text-highlight italic">7 jours.</span>
             </h2>
             <p className="text-muted-foreground">
-              Un appel. Vos exports.{" "}
-              <span className="font-semibold text-foreground">On prend la main.</span>
+              Une démo. Une connexion.{" "}
+              <span className="font-semibold text-foreground">Et ça tourne.</span>
             </p>
           </div>
         </ScrollReveal>
@@ -122,7 +122,7 @@ const ProcessSteps = () => {
                             isActive ? "text-highlight" : "text-muted-foreground"
                           }`}
                         >
-                          Étape {i + 1} — {step.day}
+                          {step.day}
                         </p>
                         <h4
                           className={`font-bold text-base mb-1 transition-colors duration-200 ${

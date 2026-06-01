@@ -51,8 +51,8 @@ const Footer = () => {
 
   const footerLinks = [
     { label: "Accueil", to: "/" },
-    { label: "Comment ça marche", to: "/#systeme" },
-    { label: "Calculateur", to: "/#calculateur" },
+    { label: "Comment ça marche", to: "/systeme" },
+    { label: "Notre offre", to: "/offre" },
     { label: "FAQ", to: "/#faq" },
     { label: "Contact", to: "/contact" },
     { label: "Mentions légales", to: "/mentions-legales" },

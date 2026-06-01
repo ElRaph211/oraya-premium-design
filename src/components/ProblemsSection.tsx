@@ -19,9 +19,9 @@ const cards = [
   {
     icon: Hourglass,
     badge: "Relances sans méthode",
-    title: <>Vous relancez quand vous y pensez. <span className="text-highlight italic">Trop tard. Sans méthode.</span></>,
-    text: <>Tout le monde reçoit le même email, au même moment, sur le même ton. Les bons payeurs sont agacés. Les mauvais payeurs ignorent.{" "}
-      <span className="font-semibold text-foreground">Et vous perdez du temps sur les deux.</span></>,
+    title: <>Vous relancez au feeling. <span className="text-highlight italic">Quand vous y pensez.</span></>,
+    text: <>Même email, même ton, même moment pour tout le monde.{" "}
+      <span className="font-semibold text-foreground">Les bons payeurs sont agacés. Les mauvais payeurs ignorent.</span></>,
   },
 ];
 

@@ -24,15 +24,12 @@ const AboutSection = () => (
               </div>
             </div>
             <p className="text-sm text-foreground/80 leading-relaxed">
-              Je travaille en alternance dans une entreprise qui est elle-même un mauvais payeur.
-              Je vois le problème des deux côtés tous les jours — celui qui attend son argent et celui qui fait attendre.
+              J'ai créé Oraya parce que j'ai constaté la même situation partout : des dirigeants de PME qui savent qu'ils ont du cash bloqué,
+              qui n'ont ni le temps ni le recul pour s'en occuper, et à qui personne ne propose autre chose qu'un tableau de bord ou une facture de consultant.
             </p>
-            <p className="text-sm text-foreground/80 leading-relaxed">
-              J'ai construit Oraya parce que j'ai vu la même chose partout : des dirigeants qui savent qu'ils ont un problème de cash,
-              qui n'ont ni le temps ni le recul pour le résoudre, et à qui personne ne propose autre chose qu'un tableau de bord ou une facture de consultant.
-            </p>
-            <p className="text-sm font-semibold text-foreground">
-              Oraya fait le travail à votre place. C'est aussi simple que ça.
+            <p className="text-sm font-semibold text-foreground leading-relaxed">
+              Un logiciel vous montre le problème. Un cabinet vous facture pour le décrire.{" "}
+              <span className="text-highlight">Oraya le règle</span> — de la connexion à l'encaissement, sans que vous ayez à gérer quoi que ce soit.
             </p>
           </div>
         </ScrollReveal>

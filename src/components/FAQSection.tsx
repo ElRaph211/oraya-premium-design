@@ -6,7 +6,7 @@ import { WHATSAPP_URL, EMAIL } from "@/config/constants";
 const faqs = [
   {
     q: "Concrètement, qu'est-ce qu'Oraya fait ?",
-    a: "On analyse vos factures, on identifie votre cash bloqué client par client, on envoie les relances depuis votre propre nom, on lit les réponses, on adapte les séquences, et on vous envoie un récap chaque lundi. Vous n'avez rien à configurer, rien à surveiller.",
+    a: "Oraya se connecte à votre outil comptable via API, détecte vos factures en retard, envoie les relances depuis votre propre nom, analyse les réponses, adapte les séquences, et vous envoie un récap chaque lundi. Vous ne touchez à rien.",
   },
   {
     q: "Mon comptable ne gère pas déjà ça ?",
@@ -14,23 +14,23 @@ const faqs = [
   },
   {
     q: "J'ai déjà un logiciel de trésorerie.",
-    a: "Votre logiciel vous montre combien vous avez encaissé et décaissé. C'est un thermomètre. Oraya vous dit pourquoi la température est élevée et la fait baisser. Client par client.",
+    a: "Votre logiciel vous montre ce qui rentre et ce qui sort. C'est un thermomètre. Oraya identifie pourquoi la température est élevée et la fait baisser. Si vous êtes déjà sur un outil comptable, Oraya s'y connecte directement — ce n'est pas un logiciel de plus, c'est une couche d'exécution au-dessus.",
   },
   {
     q: "Je ne veux pas brusquer mes clients.",
-    a: "Ne pas relancer, c'est envoyer un message : \"Prends ton temps.\" Un cadre clair n'abîme pas la relation — c'est le flou qui l'abîme. Vos clients stratégiques sont protégés : rien ne part sans votre validation.",
+    a: "Ne pas relancer, c'est envoyer un message : prenez votre temps. Un cadre clair ne détruit pas la relation — c'est le flou qui la détruit. Vos clients stratégiques sont protégés : rien ne part sans votre validation.",
   },
   {
     q: "Je peux faire ça moi-même.",
-    a: "Vous pouvez identifier qui vous paie en retard — oui. Mais avez-vous analysé les 12 derniers mois facture par facture ? Savez-vous si le retard vient de votre process de facturation, de vos CGV, ou du client ? 60 % du temps, le problème vient de l'interne. Ça, vous ne pouvez pas le voir seul.",
+    a: "Vous pouvez identifier qui vous paie en retard. Mais avez-vous analysé chaque facture des 12 derniers mois pour chiffrer exactement combien chaque client vous coûte en cash bloqué ? Et savez-vous si le retard vient de votre process de facturation ou du client ? La plupart du temps, le problème a une composante interne. C'est difficile à voir quand on est dedans.",
   },
   {
     q: "Mes données sont-elles protégées ?",
-    a: "Vous signez un accord de traitement des données à l'activation. Les relances partent depuis votre propre domaine. Votre client voit votre entreprise, pas Oraya.",
+    a: "Accord de traitement des données signé à l'activation. Connexion API sécurisée. Relances envoyées depuis votre propre domaine. Votre client voit votre entreprise, pas Oraya.",
   },
   {
     q: "C'est normal dans mon secteur.",
-    a: "C'est normalisé. Ce n'est pas normal. Si tout le monde accepte 35 jours de retard et que vous descendez à 20, vous avez du cash en plus par rapport à vos concurrents. Même secteur, mêmes clients — juste un meilleur cadre.",
+    a: "C'est normalisé. Ce n'est pas la même chose. Si tout le monde accepte 35 jours de retard et que vous descendez à 20, vous avez du cash disponible que vos concurrents n'ont pas. Même secteur, mêmes clients — juste un meilleur cadre.",
   },
 ];
 

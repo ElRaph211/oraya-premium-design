@@ -2,19 +2,19 @@ import { XCircle, CheckCircle2 } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 
 const without = [
-  { title: "Vous savez que des factures traînent.", desc: "Vous ne savez pas combien ça vous coûte." },
-  { title: "Vous relancez quand vous y pensez.", desc: "Souvent trop tard, toujours au même ton." },
-  { title: "Vous traitez tous vos clients pareil.", desc: "Vous perdez du temps sur ceux qui ne posent pas problème." },
-  { title: "Vous finissez le mois en tension.", desc: "Sans comprendre pourquoi le cash ne suit pas." },
+  { title: "Vous savez que des factures traînent.", desc: "Pas combien ça vous coûte." },
+  { title: "Vous relancez quand vous y pensez.", desc: "Souvent trop tard." },
+  { title: "Tous vos clients sont traités pareil.", desc: "Vous perdez du temps sur ceux qui ne posent pas problème." },
+  { title: "Fin de mois sous tension.", desc: "Sans savoir d'où ça vient." },
   { title: "Personne n'est dédié à ce sujet.", desc: "Vous absorbez tout." },
 ];
 
 const withOraya = [
-  { title: "Chaque facture est analysée.", desc: <>Vous connaissez le <span className="font-semibold text-highlight">montant exact bloqué</span>, client par client.</> },
-  { title: "Les relances partent depuis votre propre nom.", desc: "Au bon moment, avec le ton adapté au profil du débiteur." },
-  { title: "Chaque client est classé par risque.", desc: <>Vous intervenez uniquement sur <span className="font-semibold text-highlight">les décisions qui comptent</span>.</> },
-  { title: "Chaque lundi matin, un récap.", desc: "Ce qui a été relancé, ce qui a bougé, ce qui nécessite votre arbitrage." },
-  { title: "Oraya est votre service encaissement externalisé.", desc: <>Vous ne configurez rien, <span className="font-semibold text-highlight">vous ne surveillez rien</span>.</> },
+  { title: "Chaque facture en retard identifiée.", desc: <>Client par client, <span className="font-semibold text-highlight">euro par euro</span>.</> },
+  { title: "Relances envoyées depuis votre nom.", desc: "Au bon moment, avec le ton adapté." },
+  { title: "Chaque client classé par risque.", desc: <>Vous n'intervenez <span className="font-semibold text-highlight">que quand ça compte</span>.</> },
+  { title: "Un récap chaque lundi.", desc: "Ce qui a bougé, ce qui attend, ce qui vous revient." },
+  { title: "De la facture à l'encaissement, le service tourne.", desc: <>Sans <span className="font-semibold text-highlight">outil de plus à gérer</span>.</> },
 ];
 
 const ComparisonSection = () => (
@@ -25,10 +25,6 @@ const ComparisonSection = () => (
           <h2 className="text-2xl md:text-3xl font-bold mb-3">
             Ce que ça change <span className="text-highlight italic">concrètement.</span>
           </h2>
-          <p className="text-muted-foreground">
-            Pas un rapport de plus. Pas un tableau de bord à surveiller.{" "}
-            <span className="font-semibold text-foreground">Un service qui tourne pendant que vous faites votre métier.</span>
-          </p>
         </div>
       </ScrollReveal>
 
