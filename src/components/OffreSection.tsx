@@ -1,6 +1,6 @@
 import { Check } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
-import { TALLY_URL } from "@/config/constants";
+import { CALENDLY_URL } from "@/config/constants";
 
 const packs = [
   {
@@ -100,7 +100,7 @@ const OffreSection = () => (
       <ScrollReveal delay={250}>
         <div className="text-center mt-8">
           <a
-            href={TALLY_URL}
+            href={CALENDLY_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-cta text-cta-foreground px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97]"

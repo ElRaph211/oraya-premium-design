@@ -9,7 +9,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 const Offre = () => (
   <>
     <Helmet>
-      <title>Notre offre — Oraya | Pilotage des relances pour PME B2B</title>
+      <title>Notre offre | Oraya, pilotage des relances pour PME B2B</title>
       <meta name="description" content="Trois formules selon le volume de votre poste client : Essentiel, Croissance, Scale. Connexion, analyse initiale et mise en place incluses. Premier mois offert." />
     </Helmet>
     <Navbar />

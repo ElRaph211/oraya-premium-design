@@ -1,6 +1,6 @@
 import { Plug, Globe, Zap } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
-import { TALLY_URL } from "@/config/constants";
+import { CALENDLY_URL } from "@/config/constants";
 import diagCover from "@/assets/diagnostic-cover.jpg";
 import diagKpi from "@/assets/diagnostic-kpi.jpg";
 import diagCost from "@/assets/diagnostic-cost.jpg";
@@ -37,7 +37,7 @@ const Hero = () => (
         <ScrollReveal delay={200}>
           <div className="flex flex-wrap gap-3 pt-2">
             <a
-              href={TALLY_URL}
+              href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="group relative bg-cta text-cta-foreground px-7 py-3.5 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97]"

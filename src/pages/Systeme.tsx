@@ -9,7 +9,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 const Systeme = () => (
   <>
     <Helmet>
-      <title>Comment ça marche — Le Pilotage Silencieux Oraya</title>
+      <title>Comment ça marche | Le Pilotage Silencieux Oraya</title>
       <meta name="description" content="Le Pilotage Silencieux Oraya : connexion API, détection continue, relances depuis votre domaine, lecture des réponses, arbitrage protégé, escalade et récap chaque lundi." />
     </Helmet>
     <Navbar />

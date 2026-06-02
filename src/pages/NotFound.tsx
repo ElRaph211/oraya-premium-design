@@ -34,7 +34,7 @@ const NotFound = () => {
         </Link>
       </div>
       <p className="mt-12 text-xs text-muted-foreground">
-        Oraya — Pilotage du poste client pour PME B2B
+        Oraya · Pilotage du poste client pour PME B2B
       </p>
     </div>
   );

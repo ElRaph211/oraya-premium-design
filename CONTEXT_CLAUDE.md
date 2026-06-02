@@ -1,4 +1,4 @@
-# Contexte projet — Oraya
+# Contexte projet · Oraya
 > Colle ce fichier en entier au début d'une conversation Claude Code pour donner le contexte complet du projet.
 
 ---
@@ -25,17 +25,17 @@
 
 ---
 
-## L'offre — Oraya Precision
+## L'offre · Oraya Precision
 
 **Prix fixe : 2 500 € TTC**
 **Délai : 10 jours**
-**Garantie : 2x le coût du diagnostic en cash récupérable identifié — sinon on recommence gratuitement**
+**Garantie : 2x le coût du diagnostic en cash récupérable identifié · sinon on recommence gratuitement**
 
 ### Ce qui est inclus
 
 - 12 mois de facturation analysés facture par facture (pas une estimation globale)
-- Scoring client par niveau de risque — qui vous coûte combien et pourquoi
-- Priorisation par impact financier — quoi faire cette semaine
+- Scoring client par niveau de risque · qui vous coûte combien et pourquoi
+- Priorisation par impact financier · quoi faire cette semaine
 - Scripts de relance personnalisés copier-coller pour chaque situation
 - Kit de cadrage : modèle CGV + acompte + pénalités de retard
 - 2 appels : cadrage 20 min + restitution 30 min
@@ -45,22 +45,22 @@
 
 ### Les 5 étapes du process
 
-1. **Éligibilité (Jour 0)** — 2 minutes de questions
-2. **Cadrage (Jour 1)** — appel 20 min + export des factures
-3. **Analyse (Jours 2-9)** — on analyse chaque facture, le client n'a rien à faire
-4. **Restitution (Jour 10)** — diagnostic complet + appel 30 min
-5. **Suivi (J+30)** — point de contrôle pour mesurer les résultats
+1. **Éligibilité (Jour 0)** · 2 minutes de questions
+2. **Cadrage (Jour 1)** · appel 20 min + export des factures
+3. **Analyse (Jours 2-9)** · on analyse chaque facture, le client n'a rien à faire
+4. **Restitution (Jour 10)** · diagnostic complet + appel 30 min
+5. **Suivi (J+30)** · point de contrôle pour mesurer les résultats
 
 ---
 
 ## Le système Oraya (6 piliers)
 
-1. **Cartographie complète** — chaque facture analysée individuellement
-2. **Scoring client** — score de risque basé sur l'historique de paiement
-3. **Priorisation par impact** — actions classées par impact financier décroissant
-4. **Scripts de relance** — prêts à envoyer, adaptés au profil client
-5. **Cadre préventif** — CGV, process de facturation, calendrier de relance
-6. **Recommandations stratégiques** — renégociation des conditions, segmentation client
+1. **Cartographie complète** · chaque facture analysée individuellement
+2. **Scoring client** · score de risque basé sur l'historique de paiement
+3. **Priorisation par impact** · actions classées par impact financier décroissant
+4. **Scripts de relance** · prêts à envoyer, adaptés au profil client
+5. **Cadre préventif** · CGV, process de facturation, calendrier de relance
+6. **Recommandations stratégiques** · renégociation des conditions, segmentation client
 
 ---
 
@@ -108,10 +108,10 @@ src/
 └── assets/
     ├── logo-oraya.png        ← logo principal (navbar + 404)
     ├── bottom_image.png      ← logo footer
-    ├── image_for_a_propos.png ← photo section À propos (3 Mo — À COMPRESSER)
+    ├── image_for_a_propos.png ← photo section À propos (3 Mo · À COMPRESSER)
     ├── etape_1.png à etape_5.png ← images ProcessSteps
     ├── etape_2_1.png         ← image alternative étape 2 (dot navigation)
-    └── etape_4.png           ← 993 Ko — À COMPRESSER via squoosh.app
+    └── etape_4.png           ← 993 Ko · À COMPRESSER via squoosh.app
 
 public/
     ├── og-image.png          ← image de partage LinkedIn/WhatsApp (1200×630)
@@ -141,7 +141,7 @@ public/
 
 ---
 
-## Constantes — NE JAMAIS hardcoder, toujours importer
+## Constantes · NE JAMAIS hardcoder, toujours importer
 
 ```ts
 // src/config/constants.ts
@@ -159,11 +159,11 @@ export const SITE_URL = "https://orayasystem.fr";
 
 ### À faire dans le code
 - [ ] **Activer Umami** : décommenter le script dans `index.html`, remplacer `VOTRE_WEBSITE_ID` (compte à créer sur cloud.umami.is)
-- [ ] **Formulaire contact** : activer Web3Forms — aller sur web3forms.com, entrer raphael@orayasystem.fr, obtenir la clé, remplacer `VOTRE_CLE_WEB3FORMS` dans `src/pages/Contact.tsx` ligne 14
+- [ ] **Formulaire contact** : activer Web3Forms · aller sur web3forms.com, entrer raphael@orayasystem.fr, obtenir la clé, remplacer `VOTRE_CLE_WEB3FORMS` dans `src/pages/Contact.tsx` ligne 14
 - [ ] **Compresser les images lourdes** via squoosh.app :
-  - `src/assets/image_for_a_propos.png` — 3 Mo → cible < 200 Ko
-  - `src/assets/etape_4.png` — 993 Ko → cible < 200 Ko
-  - `src/assets/etape_2.png` — 499 Ko → cible < 200 Ko
+  - `src/assets/image_for_a_propos.png` · 3 Mo → cible < 200 Ko
+  - `src/assets/etape_4.png` · 993 Ko → cible < 200 Ko
+  - `src/assets/etape_2.png` · 499 Ko → cible < 200 Ko
 
 ### À faire manuellement
 - [ ] **Google Search Console** : inscrire orayasystem.fr, soumettre https://orayasystem.fr/sitemap.xml
@@ -173,7 +173,7 @@ export const SITE_URL = "https://orayasystem.fr";
 
 ## Points d'attention Cloudflare Pages
 
-- Build command : `npm run build` — output : `dist/`
+- Build command : `npm run build` · output : `dist/`
 - `public/_redirects` → SPA fallback indispensable, ne pas supprimer
 - `public/_headers` → headers de sécurité automatiquement lus
 - Pas de bun.lockb dans le repo (Cloudflare utilise npm via package-lock.json)

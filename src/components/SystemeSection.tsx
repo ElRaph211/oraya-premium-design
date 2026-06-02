@@ -1,12 +1,12 @@
 import { Plug, Radar, Send, MessageSquare, Shield, Bell } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
-import { TALLY_URL } from "@/config/constants";
+import { CALENDLY_URL } from "@/config/constants";
 
 const blocks = [
   {
     icon: Plug,
     title: "Connexion API",
-    text: "Oraya se connecte à votre outil comptable ou importe vos fichiers. Factures, clients, conditions de paiement — synchronisés en quelques clics.",
+    text: "Oraya se connecte à votre outil comptable ou importe vos fichiers. Factures, clients, conditions de paiement : synchronisés en quelques clics.",
   },
   {
     icon: Radar,
@@ -21,7 +21,7 @@ const blocks = [
   {
     icon: MessageSquare,
     title: "Lecture des réponses",
-    text: "Quand un client répond — promesse, contestation, demande de délai — sa réponse est analysée et la séquence s'adapte. Une promesse suspend la relance. Une contestation déclenche un traitement spécifique.",
+    text: "Quand un client répond (promesse, contestation, demande de délai), sa réponse est analysée et la séquence s'adapte. Une promesse suspend la relance. Une contestation déclenche un traitement spécifique.",
   },
   {
     icon: Shield,
@@ -88,7 +88,7 @@ const SystemeSection = () => (
       <ScrollReveal delay={150}>
         <div className="text-center mt-10">
           <a
-            href={TALLY_URL}
+            href={CALENDLY_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-cta text-cta-foreground px-8 py-4 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97]"

@@ -35,8 +35,7 @@ const ProblemsSection = () => (
           </h2>
           <p className="text-muted-foreground text-base leading-relaxed">
             C'est ce que les PME françaises laissent dormir chaque année dans les retards de paiement.{" "}
-            <span className="font-semibold text-foreground">Une entreprise sur quatre qui ferme, ferme à cause de sa trésorerie</span>{" "}
-            — pas à cause de son carnet de commandes.
+            <span className="font-semibold text-foreground">Une entreprise sur quatre qui ferme, ferme à cause de sa trésorerie</span>, pas à cause de son carnet de commandes.
           </p>
         </div>
       </ScrollReveal>

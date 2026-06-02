@@ -10,15 +10,15 @@ const faqs = [
   },
   {
     q: "Mon comptable ne gère pas déjà ça ?",
-    a: "Votre comptable enregistre que la facture n'est pas payée. Il ne vous dit pas pourquoi, combien ça vous coûte par mois, ni quoi faire cette semaine. Ce n'est pas son rôle — c'est le nôtre.",
+    a: "Votre comptable enregistre que la facture n'est pas payée. Il ne vous dit pas pourquoi, combien ça vous coûte par mois, ni quoi faire cette semaine. Ce n'est pas son rôle ; c'est le nôtre.",
   },
   {
     q: "J'ai déjà un logiciel de trésorerie.",
-    a: "Votre logiciel vous montre ce qui rentre et ce qui sort. C'est un thermomètre. Oraya identifie pourquoi la température est élevée et la fait baisser. Si vous êtes déjà sur un outil comptable, Oraya s'y connecte directement — ce n'est pas un logiciel de plus, c'est une couche d'exécution au-dessus.",
+    a: "Votre logiciel vous montre ce qui rentre et ce qui sort. C'est un thermomètre. Oraya identifie pourquoi la température est élevée et la fait baisser. Si vous êtes déjà sur un outil comptable, Oraya s'y connecte directement : ce n'est pas un logiciel de plus, c'est une couche d'exécution au-dessus.",
   },
   {
     q: "Je ne veux pas brusquer mes clients.",
-    a: "Ne pas relancer, c'est envoyer un message : prenez votre temps. Un cadre clair ne détruit pas la relation — c'est le flou qui la détruit. Vos clients stratégiques sont protégés : rien ne part sans votre validation.",
+    a: "Ne pas relancer, c'est envoyer un message : prenez votre temps. Un cadre clair ne détruit pas la relation ; c'est le flou qui la détruit. Vos clients stratégiques sont protégés : rien ne part sans votre validation.",
   },
   {
     q: "Je peux faire ça moi-même.",
@@ -30,7 +30,7 @@ const faqs = [
   },
   {
     q: "C'est normal dans mon secteur.",
-    a: "C'est normalisé. Ce n'est pas la même chose. Si tout le monde accepte 35 jours de retard et que vous descendez à 20, vous avez du cash disponible que vos concurrents n'ont pas. Même secteur, mêmes clients — juste un meilleur cadre.",
+    a: "C'est normalisé. Ce n'est pas la même chose. Si tout le monde accepte 35 jours de retard et que vous descendez à 20, vous avez du cash disponible que vos concurrents n'ont pas. Même secteur, mêmes clients : juste un meilleur cadre.",
   },
 ];
 

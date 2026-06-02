@@ -29,7 +29,7 @@ const AboutSection = () => (
             </p>
             <p className="text-sm font-semibold text-foreground leading-relaxed">
               Un logiciel vous montre le problème. Un cabinet vous facture pour le décrire.{" "}
-              <span className="text-highlight">Oraya le règle</span> — de la connexion à l'encaissement, sans que vous ayez à gérer quoi que ce soit.
+              <span className="text-highlight">Oraya le règle</span>, de la connexion à l'encaissement, sans que vous ayez à gérer quoi que ce soit.
             </p>
           </div>
         </ScrollReveal>
@@ -50,7 +50,7 @@ const AboutSection = () => (
             </div>
             <p className="text-sm text-foreground/80 leading-relaxed">
               Sur le point de finir EPITA, j'ai rejoint Raphaël pour concevoir et construire l'infrastructure
-              qui fait tourner Oraya — de l'automatisation des relances à la livraison du récap hebdomadaire.
+              qui fait tourner Oraya, de l'automatisation des relances à la livraison du récap hebdomadaire.
             </p>
             <p className="text-sm text-foreground/80 leading-relaxed">
               Mon rôle : que le service soit fiable, silencieux, et que vous n'ayez jamais à vous demander si ça tourne.

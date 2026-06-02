@@ -33,7 +33,7 @@ const Contact = () => {
   } = useForm<FormData>({ resolver: zodResolver(schema) });
 
   const onSubmit = (data: FormData) => {
-    const subject = encodeURIComponent(`Contact Oraya — ${data.name}`);
+    const subject = encodeURIComponent(`Contact Oraya : ${data.name}`);
     const body = encodeURIComponent(
       `Nom : ${data.name}\nEmail : ${data.email}\nTéléphone : ${data.phone}\n\nMessage :\n${data.message}`
     );
@@ -45,7 +45,7 @@ const Contact = () => {
   return (
     <>
       <Helmet>
-        <title>Contact — Oraya | Vérifiez votre éligibilité</title>
+        <title>Contact | Oraya, vérifiez votre éligibilité</title>
         <meta name="description" content="Contactez Raphaël Aubry pour un diagnostic retards de paiement personnalisé pour votre PME B2B." />
       </Helmet>
       <Navbar />
@@ -53,7 +53,7 @@ const Contact = () => {
         <div className="section-container max-w-4xl">
           <div className="grid md:grid-cols-5 gap-10">
 
-            {/* Colonne gauche — coordonnées */}
+            {/* Colonne gauche : coordonnées */}
             <div className="md:col-span-2">
               <ScrollReveal>
                 <h1 className="text-3xl font-bold mb-4">Contactez-nous</h1>
@@ -89,7 +89,7 @@ const Contact = () => {
               </ScrollReveal>
             </div>
 
-            {/* Colonne droite — formulaire */}
+            {/* Colonne droite : formulaire */}
             <div className="md:col-span-3">
               <ScrollReveal delay={100}>
                 <div className="rounded-xl border border-border overflow-hidden bg-background">

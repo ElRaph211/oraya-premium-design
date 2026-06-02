@@ -6,13 +6,13 @@ import { EMAIL } from "@/config/constants";
 const MentionsLegales = () => (
   <>
     <Helmet>
-      <title>Mentions légales — Oraya</title>
-      <meta name="description" content="Mentions légales du site Oraya — Diagnostic retards de paiement pour PME B2B." />
+      <title>Mentions légales | Oraya</title>
+      <meta name="description" content="Mentions légales du site Oraya. Diagnostic retards de paiement pour PME B2B." />
     </Helmet>
     <Navbar />
     <main className="section-padding">
       <div className="section-container max-w-2xl">
-        <h1 className="text-3xl font-bold mb-8">Mentions légales — Oraya</h1>
+        <h1 className="text-3xl font-bold mb-8">Mentions légales</h1>
 
         <div className="space-y-8 text-sm text-foreground/80 leading-relaxed">
           <div>
@@ -25,7 +25,7 @@ const MentionsLegales = () => (
               Email : <a href={`mailto:${EMAIL}`} className="text-highlight hover:underline">{EMAIL}</a><br />
               Téléphone : +33 7 78 95 85 54<br />
               SIRET : 1024 569 510 0015<br />
-              TVA : Non applicable — article 293B du CGI<br />
+              TVA : Non applicable (article 293B du CGI)<br />
               Directeur de la publication : Raphaël Aubry
             </p>
           </div>
@@ -34,7 +34,7 @@ const MentionsLegales = () => (
             <h2 className="text-lg font-bold text-primary mb-3">2. Hébergeur</h2>
             <p>
               Cloudflare, Inc.<br />
-              101 Townsend St — San Francisco, CA 94107 — États-Unis<br />
+              101 Townsend St, San Francisco, CA 94107, États-Unis<br />
               <a href="https://cloudflare.com" target="_blank" rel="noopener noreferrer" className="text-highlight hover:underline">cloudflare.com</a>
             </p>
           </div>
@@ -50,7 +50,7 @@ const MentionsLegales = () => (
           <div>
             <h2 className="text-lg font-bold text-primary mb-3">4. Données personnelles &amp; RGPD</h2>
             <p className="mb-3">
-              <span className="font-semibold">Responsable du traitement :</span> Raphaël Aubry — Oraya —{" "}
+              <span className="font-semibold">Responsable du traitement :</span> Raphaël Aubry, Oraya,{" "}
               <a href={`mailto:${EMAIL}`} className="text-highlight hover:underline">{EMAIL}</a>
             </p>
 
@@ -82,16 +82,16 @@ const MentionsLegales = () => (
             </p>
 
             <p className="mb-3">
-              <span className="font-semibold">Transferts hors UE :</span> Les données transitent par les serveurs de Cloudflare, Inc. (États-Unis), hébergeur du site. Ce transfert est encadré par les clauses contractuelles types de la Commission européenne. Aucun autre transfert hors UE n'est effectué. Tally (Belgique — UE) est utilisé pour les formulaires.
+              <span className="font-semibold">Transferts hors UE :</span> Les données transitent par les serveurs de Cloudflare, Inc. (États-Unis), hébergeur du site. Ce transfert est encadré par les clauses contractuelles types de la Commission européenne. Aucun autre transfert hors UE n'est effectué. Tally (Belgique, UE) est utilisé pour les formulaires.
             </p>
 
             <p className="mb-3">
               <span className="font-semibold">Vos droits (RGPD) :</span> Conformément au Règlement Européen 2016/679, vous disposez des droits d'accès, rectification, effacement, limitation, opposition et portabilité sur vos données. Pour exercer vos droits :{" "}
-              <a href={`mailto:${EMAIL}`} className="text-highlight hover:underline">{EMAIL}</a> — réponse sous 30 jours ouvrés.
+              <a href={`mailto:${EMAIL}`} className="text-highlight hover:underline">{EMAIL}</a>. Réponse sous 30 jours ouvrés.
             </p>
 
             <p>
-              <span className="font-semibold">Réclamation :</span> Commission Nationale de l'Informatique et des Libertés (CNIL) — 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07 —{" "}
+              <span className="font-semibold">Réclamation :</span> Commission Nationale de l'Informatique et des Libertés (CNIL), 3 place de Fontenoy, TSA 80715, 75334 Paris Cedex 07.{" "}
               <a href="https://cnil.fr" target="_blank" rel="noopener noreferrer" className="text-highlight hover:underline">cnil.fr</a>
             </p>
           </div>

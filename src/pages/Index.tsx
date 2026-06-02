@@ -18,7 +18,7 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 const Index = () => (
   <>
     <Helmet>
-      <title>Oraya | Pilotage des relances pour PME B2B — Vos factures rentrent, vous n'y êtes pour rien</title>
+      <title>Oraya | Pilotage des relances pour PME B2B. Vos factures rentrent, vous n'y êtes pour rien</title>
       <meta name="description" content="Oraya se connecte à votre outil comptable, pilote vos relances depuis votre nom, et vous envoie un récap chaque lundi. Opérationnel en 7 jours. Pour PME B2B sans DAF." />
     </Helmet>
     <Navbar />

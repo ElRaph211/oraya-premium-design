@@ -1,6 +1,6 @@
 import { useState } from "react";
 import ScrollReveal from "./ScrollReveal";
-import { TALLY_URL } from "@/config/constants";
+import { CALENDLY_URL } from "@/config/constants";
 
 const FINANCE_RATE = 0.05;
 
@@ -136,7 +136,7 @@ const Calculator = () => {
               <span className="font-semibold text-foreground">Oraya se connecte à votre outil, identifie où il se trouve, et le fait rentrer.</span>
             </p>
             <a
-              href={TALLY_URL}
+              href={CALENDLY_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block bg-cta text-cta-foreground px-7 py-3 rounded-lg font-semibold text-sm transition-all duration-300 shadow-lg shadow-cta/30 hover:shadow-2xl hover:shadow-cta/50 hover:-translate-y-1 hover:scale-[1.05] active:scale-[0.97]"
@@ -147,7 +147,7 @@ const Calculator = () => {
 
           <div className="text-center mt-6">
             <p className="text-[10px] text-muted-foreground leading-snug">
-              Sources : Banque de France / Altares 2025 — Retard moyen constaté : 14,1 jours au-delà des conditions contractuelles · 68 500 défaillances d'entreprises en 2025.
+              Sources : Banque de France / Altares 2025. Retard moyen constaté : 14,1 jours au-delà des conditions contractuelles · 68 500 défaillances d'entreprises en 2025.
             </p>
           </div>
         </ScrollReveal>

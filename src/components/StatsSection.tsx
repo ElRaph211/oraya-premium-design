@@ -3,7 +3,7 @@ import ScrollReveal from "./ScrollReveal";
 const stats = [
   { value: "14,1 jours", label: "de retard moyen au-delà des conditions contractuelles", source: "Altares 2025" },
   { value: "15 Mds€", label: "de cash bloqué chaque année dans les PME françaises", source: "Banque de France" },
-  { value: "68 500", label: "défaillances d'entreprises en 2025 — 1 sur 4 liée à la trésorerie", source: "Altares / Bercy" },
+  { value: "68 500", label: "défaillances d'entreprises en 2025, 1 sur 4 liée à la trésorerie", source: "Altares / Bercy" },
 ];
 
 const StatsSection = () => (

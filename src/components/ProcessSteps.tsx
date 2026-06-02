@@ -15,7 +15,7 @@ const steps = [
     title: "Démo",
     text: "On regarde votre situation et on vérifie qu'Oraya peut vous aider.",
     image: etape1,
-    alt: "Démo Oraya — Étape 1",
+    alt: "Démo Oraya : Étape 1",
   },
   {
     icon: Plug,
@@ -24,10 +24,10 @@ const steps = [
     text: (<>Votre outil comptable est connecté <span className="font-semibold text-foreground">via API ou import de fichiers</span>. Vos données sont synchronisées.</>),
     image: etape2,
     images: [
-      { src: etape2, alt: "Connexion API — Étape 2" },
-      { src: etape2_1, alt: "Import de fichiers — Étape 2" },
+      { src: etape2, alt: "Connexion API : Étape 2" },
+      { src: etape2_1, alt: "Import de fichiers : Étape 2" },
     ],
-    alt: "Connexion Oraya — Étape 2",
+    alt: "Connexion Oraya : Étape 2",
   },
   {
     icon: Settings,
@@ -36,7 +36,7 @@ const steps = [
     text: (<>Vos factures sont analysées, vos clients classés, vos séquences préparées.{" "}
       <span className="font-semibold text-foreground">Vous validez les règles sur vos comptes sensibles.</span></>),
     image: etape3,
-    alt: "Configuration Oraya — Étape 3",
+    alt: "Configuration Oraya : Étape 3",
   },
   {
     icon: Rocket,
@@ -45,7 +45,7 @@ const steps = [
     text: (<>Les premières relances partent.{" "}
       <span className="font-semibold text-highlight">Depuis votre nom, sur votre domaine.</span></>),
     image: etape4,
-    alt: "Lancement Oraya — Étape 4",
+    alt: "Lancement Oraya : Étape 4",
   },
   {
     icon: RefreshCw,
@@ -53,7 +53,7 @@ const steps = [
     title: "Pilotage continu",
     text: "Le service tourne. Les réponses sont traitées. Vous recevez un récap le lundi.",
     image: etape5,
-    alt: "Pilotage continu Oraya — Étape 5",
+    alt: "Pilotage continu Oraya : Étape 5",
   },
 ];
 
@@ -154,7 +154,7 @@ const ProcessSteps = () => {
               </div>
               <div className="flex items-center justify-center gap-2 mt-3">
                 <p className="text-xs text-muted-foreground">
-                  <span className="font-semibold text-highlight">Étape {activeStep + 1}</span> — {active.title}
+                  <span className="font-semibold text-highlight">Étape {activeStep + 1}</span> · {active.title}
                 </p>
                 {hasMultipleImages && (
                   <div className="flex gap-1.5 ml-2">
